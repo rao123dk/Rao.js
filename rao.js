@@ -30,4 +30,30 @@ Rao.prototype.init = function(){
 Rao.prototype.val = function(currVal){
 	console.log("currVal:--"+ currVal);
 	return(currVal === undefined ? this.element.value : this.element.value = currVal);
+};
+
+// for append HTML
+Rao.prototype.html = function(html){
+	if(html === undefined){
+		return this.element.innerHTML;
+	}else{
+		this.element.innerHTML = html;
+	}
+};
+
+// for set text value
+Rao.prototype.text = function(text){
+	if(text === undefined){
+		return this.element.textContent;
+	}else{
+		this.element.textContent = text;
+	}
+}
+
+Rao.prototype.append = function(appendhtml){
+	
+}
+
+Rao.prototype.ggg = function(){
+
 }

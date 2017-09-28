@@ -48,16 +48,22 @@ Rao.prototype.text = function(text){
 	}else{
 		this.element.textContent = text;
 	}
-}
+};
 
 Rao.prototype.append = function(appendhtml){
 	this.element.innerHTML = this.element.innerHTML + appendhtml;
-}
+};
 
 Rao.prototype.prepend = function(prependtHtml){
 	this.element.innerHTML = prependtHtml + this.element.innerHTML;
-}
+};
 
+Rao.prototype.eventHandler = function(){
+
+};
+
+
+//
 Rao.prototype.ggg = function(){
 
 }

@@ -51,7 +51,11 @@ Rao.prototype.text = function(text){
 }
 
 Rao.prototype.append = function(appendhtml){
-	
+	this.element.innerHTML = this.element.innerHTML + appendhtml;
+}
+
+Rao.prototype.prepend = function(prependtHtml){
+	this.element.innerHTML = prependtHtml + this.element.innerHTML;
 }
 
 Rao.prototype.ggg = function(){

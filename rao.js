@@ -132,6 +132,7 @@ Rao.prototype.LOWER = function(){
 		return (this.element.textContent || this.element.innerHTML).toLowerCase();
 }
 
+// speacial method rao_replace 
 var rao_replace = function(str, before, after){
 		return str.replace(before, function(before){
 			if (before.charAt(0) === before.charAt(0).toUpperCase()) {
@@ -141,6 +142,17 @@ var rao_replace = function(str, before, after){
         	}	
 		});
 }
+
+//set and get attribute 
+Rao.prototype.attri = function(key, value){
+	if(key !== undefined && value !== undefined){
+		this.element.setAttribute(key,value);
+	}else if(key !== undefined){
+		return this.element.getAttribute(key);
+	}
+	
+}
+
 
 //
 Rao.prototype.ggg = function(){

@@ -102,9 +102,28 @@ Rao.prototype.UPPER = function(){
 		return (this.element.textContent || this.element.innerHTML).toUpperCase();
 }
 
-var upper = function(uppertxt) {
+var upper = function(uppertxt, uppertxtcase) {
 	if(uppertxt !== undefined){
-		return uppertxt.toUpperCase();
+		switch(uppertxtcase){
+			case "1":
+			return uppertxt.charAt(0).toUpperCase() + uppertxt.substring(1);
+			break;
+
+			case "1++":
+			case ">1":
+			var U_uppertxt='';
+			uppertxtArray = uppertxt.split(" ");
+			uppertxtArray.forEach(function(data){
+				U_uppertxt += data.charAt(0).toUpperCase() + data.substring(1)+" ";
+			});
+			return U_uppertxt;
+			break;
+
+			default:
+			return " 'Illegal modifier' "
+
+		}
+		
 	}
 }
 

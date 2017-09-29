@@ -169,7 +169,23 @@ Rao.prototype.Data = function(custom_data){
 	
 }
 
+var r = {
+	browser:function(){
+		var brw;
+		if (navigator.userAgent.search("MSIE")) {
+        	return "IE";
+    	}else if (navigator.userAgent.search("Chrome")) {
+        	return "Chrome";
+    	}
+		return brw;
+	}
+}
 
+// add/remove class
+//find
+//ajax
+// $this
+//browser
 
 
 //

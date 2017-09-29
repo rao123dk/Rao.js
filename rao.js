@@ -149,9 +149,18 @@ Rao.prototype.attri = function(key, value){
 		this.element.setAttribute(key,value);
 	}else if(key !== undefined){
 		return this.element.getAttribute(key);
-	}
-	
+	}	
 }
+
+//Hide and show element
+Rao.prototype.in = function(){
+	this.element.style.display = 'block';
+}
+Rao.prototype.out = function(){
+	this.element.style.display = 'none';
+}
+
+
 
 
 //

@@ -58,9 +58,46 @@ Rao.prototype.prepend = function(prependtHtml){
 	this.element.innerHTML = prependtHtml + this.element.innerHTML;
 };
 
-Rao.prototype.eventHandler = function(){
+
+Rao.prototype.eventHandler = {
+	events: [],
+	bindEvent: function(event, callback, target ){
+		//remove events
+		//target.removeEventListener(event, callback);
+		this.unbindEvent(event, target);
+		//add events
+		target.addEventListener(event, callback, false);
+		this.events.push({
+			type : event,
+			event :callback,
+			target :target
+		});
+	},
+	findEvent:function(event){
+		return this.events.filter(function(eve){
+			return (eve.type === event);
+		},event)[0];
+	},
+	unbindEvent : function(event, target){
+		var searchEvent = this.findEvent(event);
+		if(searchEvent !== undefined){
+			target.removeEventListener(event, searchEvent.event, false);
+		}
+
+		// update events
+		this.events = this.events.filter(function(evt){
+			return (evt.type !== event);
+		},event);
+	}
+
 
 };
+
+
+// on 
+Rao.prototype.on = function(event, callback, target){
+	var evt = this.eventHandler.bindEvent(event, callback, this.element);
+}
 
 
 //

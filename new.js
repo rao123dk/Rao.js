@@ -20,7 +20,9 @@ rao('#txt').append("<div>Hello append</div>");
 rao('#txt').prepend("<div>Hello prepend</div>");
 
 
-
+rao('#txt').on('click', function(){ 
+	alert("hmm");
+});
 
 
 

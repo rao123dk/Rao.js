@@ -132,6 +132,15 @@ Rao.prototype.LOWER = function(){
 		return (this.element.textContent || this.element.innerHTML).toLowerCase();
 }
 
+var rao_replace = function(str, before, after){
+		return str.replace(before, function(before){
+			if (before.charAt(0) === before.charAt(0).toUpperCase()) {
+            	return after.charAt(0).toUpperCase() + after.substr(1).toLowerCase();
+        	} else {
+            	return after.charAt(0).toLowerCase() + after.substr(1).toLowerCase();
+        	}	
+		});
+}
 
 //
 Rao.prototype.ggg = function(){

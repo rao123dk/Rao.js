@@ -23,9 +23,8 @@ Rao.prototype.init = function(){
 }
 
 
-//for Getting value
+//for get/set value
 Rao.prototype.val = function(currVal){
-	console.log("currVal:--"+ currVal);
 	return(currVal === undefined ? this.element.value : this.element.value = currVal);
 };
 
@@ -38,10 +37,10 @@ Rao.prototype.html = function(html){
 	}
 };
 
-// for set text value
+// for get/set text value
 Rao.prototype.text = function(text){
 	if(text === undefined){
-		return this.element.textContent;
+		return this.element.textContent || this.element.innerHTML;
 	}else{
 		this.element.textContent = text;
 	}
@@ -89,8 +88,6 @@ Rao.prototype.eventHandler = {
 
 
 };
-
-
 // on()
 Rao.prototype.on = function(event, callback, target){
 	var evt = this.eventHandler.bindEvent(event, callback, this.element);
@@ -100,7 +97,21 @@ Rao.prototype.off = function(event, callback, target){
 	var evt = this.eventHandler.unbindEvent(event,this.element);
 }
 
+// for upper case
+Rao.prototype.UPPER = function(){
+		return (this.element.textContent || this.element.innerHTML).toUpperCase();
+}
 
+var upper = function(uppertxt) {
+	if(uppertxt !== undefined){
+		return uppertxt.toUpperCase();
+	}
+}
+
+// for upper case
+Rao.prototype.LOWER = function(){
+		return (this.element.textContent || this.element.innerHTML).toLowerCase();
+}
 
 
 //

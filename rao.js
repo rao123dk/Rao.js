@@ -160,6 +160,15 @@ Rao.prototype.out = function(){
 	this.element.style.display = 'none';
 }
 
+//custom data get
+
+Rao.prototype.Data = function(custom_data){
+	if(custom_data !== undefined){
+		return document.getElementById(this.element.getAttribute("id")).getAttribute(custom_data);	
+	}
+	
+}
+
 
 
 

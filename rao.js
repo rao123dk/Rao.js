@@ -1,7 +1,7 @@
 var Rao = function(selector) {
 	this.selector = selector || null; 
  	this.element = null;
- 	this.arr=[];
+ 	
 };
 
 //main
@@ -18,9 +18,6 @@ Rao.prototype.init = function(){
 	}else if(this.selector.charAt(0) === '.'){
 		//this.element = document.getElementsByClassName(this.selector.substr(1));
 		this.element = document.querySelectorAll(this.selector);//["element"];
-		for(vv in this.element){
-			this.arr.push(vv);
-		}
 		
 	}
 }
@@ -94,10 +91,16 @@ Rao.prototype.eventHandler = {
 };
 
 
-// on 
+// on()
 Rao.prototype.on = function(event, callback, target){
 	var evt = this.eventHandler.bindEvent(event, callback, this.element);
 }
+//off()
+Rao.prototype.off = function(event, callback, target){
+	var evt = this.eventHandler.unbindEvent(event,this.element);
+}
+
+
 
 
 //

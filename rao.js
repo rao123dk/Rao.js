@@ -173,9 +173,9 @@ var r = {
 	browser:function(){
 		var brw;
 		if (navigator.userAgent.search("MSIE")) {
-        	return "IE";
+        	brw ="IE";
     	}else if (navigator.userAgent.search("Chrome")) {
-        	return "Chrome";
+        	brw ="Chrome";
     	}
 		return brw;
 	}

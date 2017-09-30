@@ -169,6 +169,12 @@ Rao.prototype.Data = function(custom_data){
 	
 }
 
+// copy right year
+Rao.prototype.currentYear = function(){
+	this.element.textContent = new Date().getFullYear();
+}
+
+//browser 
 var r = {
 	browser:function(){
 		var brw;

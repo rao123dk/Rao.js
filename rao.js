@@ -174,6 +174,18 @@ Rao.prototype.currentYear = function(){
 	this.element.textContent = new Date().getFullYear();
 }
 
+//add or remove class
+Rao.prototype.addClass = function(addclass){
+	if(addclass !== undefined){
+		this.element.className += " "+addclass;
+	}	
+}
+Rao.prototype.removeClass = function(removeClass){
+	if(removeClass !== undefined){
+		this.element.classList.remove(removeClass);
+	}
+	//console.log(this.element.classList);
+}
 //browser 
 var r = {
 	browser:function(){

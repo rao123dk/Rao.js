@@ -65,7 +65,10 @@
 // rao("#copyrightYear").removeClass("sample");
 
 //class testing
-console.log(rao('.nope')[0]);
+var tt = rao('.nope')[0];
+//console.log(tt.text());
 
 console.log(document.querySelectorAll('.nope')[0].textContent);
-console.log(document.getElementsByClassName('nope'));
+//console.log(document.getElementsByClassName('nope'));
+
+console.log(r.trim("hh"));

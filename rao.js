@@ -190,6 +190,16 @@ Rao.prototype.removeClass = function(removeClass){
 	
 }
 
+//trim method
+var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+Rao.prototype.trim = function(){
+	return this.element == null ? "" : ( this.element + "" ).replace( rtrim, "" );
+}
+Rao.prototype.r = {
+	trim : function(text){
+		return this.element;
+	}
+}
 
 //browser 
 var r = {

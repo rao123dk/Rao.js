@@ -1,61 +1,71 @@
-var a = rao("#userame");
-console.log(a.val());
+// var a = rao("#userame");
+// console.log(a.val());
 
 
-//var b = rao("input[type='text']");
-//console.log(b);
+// //var b = rao("input[type='text']");
+// //console.log(b);
 
 
-var c = rao(".myname");
-console.log(c);
+// var c = rao(".myname");
+// console.log(c);
 
 
-var ht = rao('#htm');
-ht.html("<p>hello html append</p>");
+// var ht = rao('#htm');
+// ht.html("<p>hello html append</p>");
 
-rao('#txt').text("append by text also");
-console.log(rao('#txt').text());
+// rao('#txt').text("append by text also");
+// console.log(rao('#txt').text());
 
-rao('#txt').append("<div>Hello append</div>");
-rao('#txt').prepend("<div>Hello prepend</div>");
-
-
-rao('#txt').on('click', function(){ 
-	alert("hmm");
-});
-//rao('#txt').off('click');
+// rao('#txt').append("<div>Hello append</div>");
+// rao('#txt').prepend("<div>Hello prepend</div>");
 
 
-// for upper
-
-//its direct method
-	//console.log(rao('#sr').UPPER());
-
-//its will be dynamic
-var abb = rao('#sr').text();
-	//console.log(upper(abb));
-	//rao('#sr').text(upper(abb))
-
-// console.log(upper(abb,"1"));
-// console.log(upper(abb,"1++"));
-// console.log(upper(abb,">1"));
-// console.log(upper(abb,"_"));
-
-//NOTE: Preserve the case of the original word when you are replacing it. For example if you 
-//mean to replace the word "Book" with the word "dog", it should be replaced as "Dog"
-
-console.log(rao_replace("Let us go to the store", "store", "mall"));
+// rao('#txt').on('click', function(){ 
+// 	alert("hmm");
+// });
+// //rao('#txt').off('click');
 
 
-rao('#sr').attri("name","rao.js");
+// // for upper
 
-console.log(rao('#sr').attri("class"));
+// //its direct method
+// 	//console.log(rao('#sr').UPPER());
 
-rao('#sr').out();
+// //its will be dynamic
+// var abb = rao('#sr').text();
+// 	//console.log(upper(abb));
+// 	rao('#sr').text(upper(abb,"1++"))
 
-setTimeout(()=>{rao('#sr').in();},2000);
+// // console.log(upper(abb,"1"));
+// // console.log(upper(abb,"1++"));
+// // console.log(upper(abb,">1"));
+// // console.log(upper(abb,"_"));
+
+// //NOTE: Preserve the case of the original word when you are replacing it. For example if you 
+// //mean to replace the word "Book" with the word "dog", it should be replaced as "Dog"
+
+// console.log(rao_replace("Let us go to the store", "store", "mall"));
 
 
-console.log(rao("#cus").Data("data-who"));
+// rao('#sr').attri("name","rao.js");
 
-console.log(r.browser());
+// console.log(rao('#sr').attri("class"));
+
+// rao('#sr').out();
+
+// setTimeout(()=>{rao('#sr').in();},2000);
+
+
+// console.log(rao("#cus").Data("data-who"));
+
+// console.log(r.browser());
+// rao("#copyrightYear").currentYear();
+
+// rao("#copyrightYear").addClass("add");
+// rao("#copyrightYear").removeClass("sample");
+
+//class testing
+console.log(rao('.nope')[0]);
+
+console.log(document.querySelectorAll('.nope')[0].textContent);
+console.log(document.getElementsByClassName('nope'));

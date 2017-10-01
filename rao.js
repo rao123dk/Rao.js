@@ -4,11 +4,16 @@ var Rao = function(selector) {
  	
 };
 
-//main
+//main selector
 rao = function(selector){
 	var elm = new Rao(selector);
 	elm.init();
-	return elm;
+	if(selector.charAt(0) === '#'){
+		return elm;
+	}else {
+		return elm["element"];
+	}
+	
 }
 
 // for initialization and selection
@@ -16,9 +21,7 @@ Rao.prototype.init = function(){
 	if(this.selector.charAt(0) === '#'){
 		this.element = document.getElementById(this.selector.substr(1));
 	}else if(this.selector.charAt(0) === '.'){
-		//this.element = document.getElementsByClassName(this.selector.substr(1));
-		this.element = document.querySelectorAll(this.selector);//["element"];
-		
+		this.element = document.querySelectorAll(this.selector);	
 	}
 }
 
@@ -184,8 +187,10 @@ Rao.prototype.removeClass = function(removeClass){
 	if(removeClass !== undefined){
 		this.element.classList.remove(removeClass);
 	}
-	//console.log(this.element.classList);
+	
 }
+
+
 //browser 
 var r = {
 	browser:function(){
@@ -199,7 +204,6 @@ var r = {
 	}
 }
 
-// add/remove class
 //find
 //ajax
 // $this

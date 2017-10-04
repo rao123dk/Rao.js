@@ -71,4 +71,6 @@ var tt = rao('.nope')[0];
 console.log(document.querySelectorAll('.nope')[0].textContent);
 //console.log(document.getElementsByClassName('nope'));
 
-console.log(r.trim("hh"));
+//console.log(r.trim("hh"));
+
+console.log(r.rao_replace("hello How are you", "How", "hhhhh"));

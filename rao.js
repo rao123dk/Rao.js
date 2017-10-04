@@ -105,46 +105,11 @@ Rao.prototype.UPPER = function(){
 		return (this.element.textContent || this.element.innerHTML).toUpperCase();
 }
 
-var upper = function(uppertxt, uppertxtcase) {
-	if(uppertxt !== undefined){
-		switch(uppertxtcase){
-			case "1":
-			return uppertxt.charAt(0).toUpperCase() + uppertxt.substring(1);
-			break;
-
-			case "1++":
-			case ">1":
-			var U_uppertxt='';
-			uppertxtArray = uppertxt.split(" ");
-			uppertxtArray.forEach(function(data){
-				U_uppertxt += data.charAt(0).toUpperCase() + data.substring(1)+" ";
-			});
-			return U_uppertxt;
-			break;
-
-			default:
-			return " 'Illegal modifier' "
-
-		}
-		
-	}
-}
-
 // for upper case
-Rao.prototype.LOWER = function(){
+Rao.prototype.LOWER = function() {
 		return (this.element.textContent || this.element.innerHTML).toLowerCase();
 }
 
-// speacial method rao_replace 
-var rao_replace = function(str, before, after){
-		return str.replace(before, function(before){
-			if (before.charAt(0) === before.charAt(0).toUpperCase()) {
-            	return after.charAt(0).toUpperCase() + after.substr(1).toLowerCase();
-        	} else {
-            	return after.charAt(0).toLowerCase() + after.substr(1).toLowerCase();
-        	}	
-		});
-}
 
 //set and get attribute 
 Rao.prototype.attri = function(key, value){
@@ -195,14 +160,54 @@ var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
 Rao.prototype.trim = function(){
 	return this.element == null ? "" : ( this.element + "" ).replace( rtrim, "" );
 }
+//think about this !
 Rao.prototype.r = {
 	trim : function(text){
 		return this.element;
 	}
 }
 
-//browser 
+//A universal object for external functions 
 var r = {
+	// speacial method rao_replace eg:- if you want to replce "Rao" to "dk" 
+	//then it will directly replce by Dk 
+	 rao_replace : function(str, before, after){
+		return str.replace(before, function(before){
+			if (before.charAt(0) === before.charAt(0).toUpperCase()) {
+		    	return after.charAt(0).toUpperCase() + after.substr(1).toLowerCase();
+			} else {
+		    	return after.charAt(0).toLowerCase() + after.substr(1).toLowerCase();
+			}	
+		});
+	},
+
+	//for customize upper case formater
+	upper:function(uppertxt, uppertxtcase) {
+		if(uppertxt !== undefined){
+			switch(uppertxtcase){
+				case "1":
+				return uppertxt.charAt(0).toUpperCase() + uppertxt.substring(1);
+				break;
+
+				case "1++":
+				case ">1":
+				var U_uppertxt='';
+				uppertxtArray = uppertxt.split(" ");
+				uppertxtArray.forEach(function(data){
+					U_uppertxt += data.charAt(0).toUpperCase() + data.substring(1)+" ";
+				});
+				return U_uppertxt;
+				break;
+
+				default:
+				return " 'Illegal modifier' "
+
+			}
+			
+		}
+	},
+
+	//for browser
 	browser:function(){
 		var brw;
 		if (navigator.userAgent.search("MSIE")) {
@@ -214,8 +219,9 @@ var r = {
 	}
 }
 
+
 //find
-//ajax
+
 // $this
 //browser
 

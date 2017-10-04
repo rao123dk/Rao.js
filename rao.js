@@ -220,6 +220,12 @@ var r = {
 }
 
 
+// for find children
+Rao.prototype.mychild = function(){
+	return this.element.children;
+}
+
+
 //find
 
 // $this

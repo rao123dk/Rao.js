@@ -1,3 +1,4 @@
+"use strict";
 var Rao = function(selector) {
 	this.selector = selector || null; 
  	this.element = null;
@@ -5,7 +6,7 @@ var Rao = function(selector) {
 };
 
 //main selector
-rao = function(selector){
+window.rao = function(selector){
 	var elm = new Rao(selector);
 	elm.init();
 	if(selector.charAt(0) === '#'){
@@ -31,7 +32,7 @@ Rao.prototype.val = function(currVal){
 	return(currVal === undefined ? this.element.value : this.element.value = currVal);
 };
 
-// for append HTML
+// for get/set HTML
 Rao.prototype.html = function(html){
 	if(html === undefined){
 		return this.element.innerHTML;

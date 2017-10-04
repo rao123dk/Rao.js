@@ -76,3 +76,6 @@ console.log(document.querySelectorAll('.nope')[0].textContent);
 console.log(r.rao_replace("hello How are you", "How", "hhhhh"));
 
 console.log(rao('#txt').mychild());
+
+
+r.showWatch('#showwatch',"h","m","s",hour12=true);

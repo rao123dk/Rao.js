@@ -169,6 +169,7 @@ Rao.prototype.r = {
 }
 
 //A universal object for external functions 
+var rrrr=0;
 var r = {
 	// speacial method rao_replace eg:- if you want to replce "Rao" to "dk" 
 	//then it will directly replce by Dk 
@@ -208,6 +209,31 @@ var r = {
 		}
 	},
 
+	//for current time (now only for id)
+	showWatch : function(selector, h, m, s, hour12=false) {
+		r.timercal(selector,h,m,s);
+		setInterval(function(){
+			r.timercal(selector,h,m,s); 
+		}, 1000);
+	},
+	timercal : function(selector,h, m, s){
+			var d = new Date();
+			this.hh = d.getHours();
+			this.mm = d.getMinutes();
+			this.ss = d.getSeconds();
+			this.ampm = this.hh >= 12 ? 'PM' : 'AM';
+			this.hh = this.hh % 12;
+			this.hh = this.hh ? this.hh : 12;
+			this.displayTime=0;
+			if(selector !== undefined && h === "h" && m === "m" && s === "s"){
+				this.displayTime = this.hh + ":" + this.mm + ":" + this.ss; 
+			}else if(selector !== undefined && h === "h" && m=== "m"){
+				this.displayTime = this.hh + ":" + this.mm;
+			}else if(selector !== undefined && h === "h"){
+				this.displayTime = this.hh;
+			}
+			document.getElementById(selector.substr(1)).innerHTML = hour12 ? this.displayTime +" "+this.ampm : this.displayTime;
+	},
 	//for browser
 	browser:function(){
 		var brw;

@@ -234,6 +234,8 @@ var r = {
 			}
 			document.getElementById(selector.substr(1)).innerHTML = hour12 ? this.displayTime +" "+this.ampm : this.displayTime;
 	},
+	//for date
+	
 	//for browser
 	browser:function(){
 		var brw;

@@ -243,7 +243,7 @@ var r = {
 		    } else if(e.which) {
 		        keynum = e.which;
 		    }
-		    console.log(keynum);
+		    window.alert(keynum);
 		    e.preventDefault();
 		});
 	},

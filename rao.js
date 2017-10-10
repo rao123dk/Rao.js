@@ -169,7 +169,6 @@ Rao.prototype.r = {
 }
 
 //A universal object for external functions 
-var rrrr=0;
 var r = {
 	// speacial method rao_replace eg:- if you want to replce "Rao" to "dk" 
 	//then it will directly replce by Dk 
@@ -234,6 +233,20 @@ var r = {
 			}
 			document.getElementById(selector.substr(1)).innerHTML = hour12 ? this.displayTime +" "+this.ampm : this.displayTime;
 	},
+
+	//key code
+	keycode :function(){
+		document.addEventListener("keydown", function(e){
+			var keynum;
+			if (window.event) {
+		        keynum = e.keyCode;
+		    } else if(e.which) {
+		        keynum = e.which;
+		    }
+		    console.log(keynum);
+		    e.preventDefault();
+		});
+	},
 	//for date
 	
 	//for browser
@@ -265,3 +278,6 @@ Rao.prototype.mychild = function(){
 Rao.prototype.ggg = function(){
 
 }
+
+
+//var $$ = document.querySelectorAll.bind(document);

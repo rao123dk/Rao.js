@@ -79,3 +79,5 @@ console.log(rao('#txt').mychild());
 
 
 r.showWatch('#showwatch',"h","m","s",hour12=true);
+
+r.keycode(); // for checking keycode

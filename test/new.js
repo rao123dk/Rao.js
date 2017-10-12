@@ -83,4 +83,7 @@ r.showWatch('#showwatch',"h","m","s",hour12=true);
 //r.keycode(); // for checking keycode
 
 //put any two numbers in between
-console.log(r.random(0.120,0.0200));
+console.log(r.random(555555, 3333));
+
+// put length of random string you want
+console.log(r.randomString(80));

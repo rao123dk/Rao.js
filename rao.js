@@ -251,9 +251,18 @@ var r = {
 	
 	//for random number
 	random :function(a, b){
-		var max = Math.max(a, b); 
-		var min =  Math.min(a, b);  
-		return Math.floor(Math.random() * (max - min + 1)) + min;
+		this.max = Math.max(a, b); 
+		this.min =  Math.min(a, b);  
+		return Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
+	},
+	// for random string
+	randomString:function(strlen){
+		this.randomstring = "";
+  		this.possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	  	for (let i = 0; i < strlen; i++){
+	  		this.randomstring += this.possible.charAt(Math.floor(Math.random() * this.possible.length));
+	  	}
+		return this.randomstring;
 	},
 	
 	//for browser

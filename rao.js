@@ -1,4 +1,5 @@
 "use strict";
+
 var Rao = function(selector) {
 	this.selector = selector || null; 
  	this.element = null;
@@ -267,6 +268,8 @@ Rao.prototype.mychild = function(){
 	return this.element.children;
 }
 
+document.write("<script>console.log('%c welcome to Rao.js', 'background:#02f902; font-size:50px;');</script>");
+
 
 //find
 
@@ -275,7 +278,7 @@ Rao.prototype.mychild = function(){
 
 
 //
-Rao.prototype.ggg = function(){
+Rao.prototype.next = function(){
 
 }
 

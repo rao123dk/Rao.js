@@ -75,9 +75,9 @@ console.log(document.querySelectorAll('.nope')[0].textContent);
 
 console.log(r.rao_replace("hello How are you", "How", "hhhhh"));
 
-console.log(rao('#txt').mychild());
+//console.log(rao('#txt').mychild());
+console.dir(rao('#txt'));
 
 
 r.showWatch('#showwatch',"h","m","s",hour12=true);
-
-r.keycode(); // for checking keycode
+//r.keycode(); // for checking keycode

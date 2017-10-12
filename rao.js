@@ -248,7 +248,13 @@ var r = {
 		    e.preventDefault();
 		});
 	},
-	//for date
+	
+	//for random number
+	random :function(a, b){
+		var max = Math.max(a, b); 
+		var min =  Math.min(a, b);  
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	},
 	
 	//for browser
 	browser:function(){

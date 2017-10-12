@@ -81,3 +81,6 @@ console.dir(rao('#txt'));
 
 r.showWatch('#showwatch',"h","m","s",hour12=true);
 //r.keycode(); // for checking keycode
+
+//put any two numbers in between
+console.log(r.random(0.120,0.0200));

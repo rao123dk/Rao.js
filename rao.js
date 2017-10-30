@@ -1,3 +1,5 @@
+(function(){
+
 "use strict";
 
 var Rao = function(selector) {
@@ -170,7 +172,7 @@ Rao.prototype.r = {
 }
 
 //A universal object for external functions 
-var r = {
+window.r = {
 	// speacial method rao_replace eg:- if you want to replce "Rao" to "dk" 
 	//then it will directly replce by Dk 
 	 rao_replace : function(str, before, after){
@@ -264,7 +266,29 @@ var r = {
 	  	}
 		return this.randomstring;
 	},
-	
+	//debouncing
+	debounce : function(func, wait, immediate){
+		var timeout;
+		return function() {
+			var context = this, args = arguments;
+			var later = function() {
+				timeout = null;
+				if (!immediate) func.apply(context, args);
+			};
+			var callNow = immediate && !timeout;
+			clearTimeout(timeout);
+			timeout = setTimeout(later, wait);
+			if (callNow) func.apply(context, args);
+		};
+	},
+
+
+	//for JavaScript to PHP
+	//$str = "A string here";
+	// P2J : function(str){
+	// 	var bool = '<?php echo str ?>';
+	// 	document.write('<script type="text/javascript">'+ bool +'</script>');
+	// },
 	//for browser
 	browser:function(){
 		var brw;
@@ -299,3 +323,5 @@ Rao.prototype.next = function(){
 
 
 //var $$ = document.querySelectorAll.bind(document);
+
+})(window);

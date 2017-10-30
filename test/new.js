@@ -87,3 +87,13 @@ console.log(r.random(555555, 3333));
 
 // put length of random string you want
 console.log(r.randomString(80));
+
+console.log(r.randomString(80));
+//r.P2J("hello");
+//console.log(hello);
+
+var myEfficientFn = r.debounce(function() {
+	 console.log('You are clicking!');
+}, 250);
+
+window.addEventListener('click', myEfficientFn);

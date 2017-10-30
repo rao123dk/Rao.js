@@ -29,12 +29,12 @@
 // // for upper
 
 // //its direct method
-// 	//console.log(rao('#sr').UPPER());
+console.log(rao('#sr').UPPER());
 
-// //its will be dynamic
-// var abb = rao('#sr').text();
-// 	//console.log(upper(abb));
-// 	rao('#sr').text(upper(abb,"1++"))
+//its will be dynamic
+var abb = rao('#sr').text();
+	//console.log(upper(abb));
+	rao('#sr').text(r.upper(abb,">1"))
 
 // // console.log(upper(abb,"1"));
 // // console.log(upper(abb,"1++"));

@@ -196,7 +196,7 @@ window.r = {
 				case "1++":
 				case ">1":
 				var U_uppertxt='';
-				uppertxtArray = uppertxt.split(" ");
+				var uppertxtArray = uppertxt.split(" ");
 				uppertxtArray.forEach(function(data){
 					U_uppertxt += data.charAt(0).toUpperCase() + data.substring(1)+" ";
 				});
@@ -268,16 +268,16 @@ window.r = {
 	},
 	//debouncing
 	debounce : function(func, wait, immediate){
-		var timeout;
+		this.timeout;
 		return function() {
 			var context = this, args = arguments;
 			var later = function() {
-				timeout = null;
+				this.timeout = null;
 				if (!immediate) func.apply(context, args);
 			};
-			var callNow = immediate && !timeout;
-			clearTimeout(timeout);
-			timeout = setTimeout(later, wait);
+			var callNow = immediate && !this.timeout;
+			clearTimeout(this.timeout);
+			this.timeout = setTimeout(later, wait);
 			if (callNow) func.apply(context, args);
 		};
 	},

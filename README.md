@@ -1,5 +1,16 @@
 # Rao.js
 
+### CDN
+```
+Use this URL in production:- 
+<script src="https://cdn.rawgit.com/rao123dk/Rao.js/5cab7589/rao.js" > </script> 
+
+
+Use this URL for development
+<script src="https://rawgit.com/rao123dk/Rao.js/master/rao.js" > </script> 
+
+```
+
 ### Get Element by id
 ```
 var a = rao("#id");

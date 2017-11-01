@@ -158,6 +158,15 @@ Rao.prototype.removeClass = function(removeClass){
 	}
 	
 }
+// check class availability
+Rao.prototype.hasClass = function(hasClass){
+	if(hasClass !== undefined && this.element.classList.contains(hasClass)){
+		return true;
+	}else{
+		return false;
+	}
+	
+}
 
 //trim method
 var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;

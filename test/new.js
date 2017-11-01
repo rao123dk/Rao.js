@@ -102,3 +102,5 @@ console.log(r.browser());
 
 console.log(r.fetch("data.json"));
 //r.fetch("data.json");
+
+console.log(rao("#copyrightYear").hasClass("samplek"));

@@ -29,12 +29,12 @@
 // // for upper
 
 // //its direct method
-console.log(rao('#sr').UPPER());
+//console.log(rao('#sr').UPPER());
 
 //its will be dynamic
-var abb = rao('#sr').text();
-	//console.log(upper(abb));
-	rao('#sr').text(r.upper(abb,">1"))
+// var abb = rao('#sr').text();
+// 	//console.log(upper(abb));
+// 	rao('#sr').text(r.upper(abb,">1"))
 
 // // console.log(upper(abb,"1"));
 // // console.log(upper(abb,"1++"));
@@ -97,3 +97,5 @@ var myEfficientFn = r.debounce(function() {
 }, 250);
 
 window.addEventListener('click', myEfficientFn);
+
+console.log(r.browser());

@@ -99,3 +99,6 @@ var myEfficientFn = r.debounce(function() {
 window.addEventListener('click', myEfficientFn);
 
 console.log(r.browser());
+
+console.log(r.fetch("data.json"));
+//r.fetch("data.json");

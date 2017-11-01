@@ -320,6 +320,12 @@ window.r = {
 		if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
 		return M.join(' ');
 		
+	},
+	fetch:function(curr_url){
+		fetch(curr_url)
+		.then(function(response){
+			response.json().then(function(data){ console.log(data); return { data } = data; });
+		});
 	}
 }
 
@@ -329,7 +335,7 @@ Rao.prototype.mychild = function(){
 	return this.element.children;
 }
 
-document.write("<script>console.log('%c welcome to Rao.js', 'background:#02f902; font-size:50px;');</script>");
+//document.write("<script>console.log('%c welcome to Rao.js', 'background:#02f902; font-size:50px;');</script>");
 
 
 //find

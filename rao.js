@@ -132,6 +132,10 @@ Rao.prototype.out = function(){
 	this.element.style.display = 'none';
 }
 
+Rao.prototype.inOut = function(){
+	this.element.style.display = this.element.style.display === "block" ? this.element.style.display = "none" : this.element.style.display = "block";
+}
+
 //custom data get
 
 Rao.prototype.Data = function(custom_data){

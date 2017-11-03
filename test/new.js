@@ -106,16 +106,11 @@ console.log(r.fetch("data.json"));
 console.log(rao("#copyrightYear").hasClass("samplek"));
 
 
-// $("#flip").click(function(){
-//         $("#panel").slideUp("slow");
-// });
-
-
 
 
 //function(slide_type, speed){}
 rao("#flip").on("click", function(){
-	rao("#panel").slide("up");
+	rao("#panel").slide("up", "slow");
 });
 
 
@@ -124,9 +119,9 @@ rao("#flip").on("click", function(){
 // });
 
 
-rao("#flip2").on("click", function(){
-	rao("#panel2").slide("toggel");
-});
+// rao("#flip2").on("click", function(){
+// 	rao("#panel2").slide("toggel", 50);
+// });
 
 
 

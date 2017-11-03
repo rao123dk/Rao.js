@@ -175,12 +175,13 @@ Rao.prototype.hasClass = function(hasClass){
 
 // For rao animation 
 
-Rao.prototype.slide = function(slide_type, speed){
+Rao.prototype.slide = function(slide_type, slide_speed){
 	//@ slide_type - up, down, and toggele
 	//@ speed - slow, medium, and fast
 	if(slide_type !== undefined && slide_type === "up"){
 		this.element.style.display = 'none';
-		this.element.style.opacity += 0.1;
+		//this.element.style.opacity += 0.1;
+		this.speed(slide_speed,this.element);
 		
 	}
 
@@ -192,9 +193,31 @@ Rao.prototype.slide = function(slide_type, speed){
 
 	if(slide_type !== undefined && slide_type === "toggel"){
 		this.element.style.display = this.element.style.display === "block" ? this.element.style.display = "none" : this.element.style.display = "block";
-		
+		this.speed(slide_speed,this.element);
 	}
 }
+
+Rao.prototype.speed = function(_speed , _element){
+	let op = 1;
+	let _tr_rate;
+	//_tr_rate = (_speed === "slow" && typeof _speed === 'string') ? 1000 : _speed;
+	// _tr_rate = (_speed === "medium" && typeof _speed === 'string') ? 500 : _speed;
+	// _tr_rate = (_speed === "fast" && typeof _speed === 'string') ? 100 : _speed;
+
+	if(_speed === "slow"){ _tr_rate = 1000; }
+	console.log(_tr_rate);
+	let timer = setInterval(function () {
+		console.log("ok here 2");
+        if (op <= 0.1){
+            clearInterval(timer);
+        }
+        _element.style.opacity = op;
+        op -= 0.1;
+    }, _tr_rate);
+}
+
+
+
 
 //trim method
 var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;

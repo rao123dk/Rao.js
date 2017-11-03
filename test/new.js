@@ -92,11 +92,11 @@ console.log(r.randomString(80));
 //r.P2J("hello");
 //console.log(hello);
 
-var myEfficientFn = r.debounce(function() {
-	 console.log('You are clicking!');
-}, 250);
+// var myEfficientFn = r.debounce(function() {
+// 	 console.log('You are clicking!');
+// }, 250);
 
-window.addEventListener('click', myEfficientFn);
+// window.addEventListener('click', myEfficientFn);
 
 console.log(r.browser());
 
@@ -104,3 +104,34 @@ console.log(r.fetch("data.json"));
 //r.fetch("data.json");
 
 console.log(rao("#copyrightYear").hasClass("samplek"));
+
+
+// $("#flip").click(function(){
+//         $("#panel").slideUp("slow");
+// });
+
+
+
+
+//function(slide_type, speed){}
+rao("#flip").on("click", function(){
+	rao("#panel").slide("up");
+});
+
+
+// rao("#flip2").on("click", function(){
+// 	rao("#panel2").slide("down");
+// });
+
+
+rao("#flip2").on("click", function(){
+	rao("#panel2").slide("toggel");
+});
+
+
+
+
+
+
+//console.log(rao("#panel"));
+//console.log(rao("#panel").slide("up"));

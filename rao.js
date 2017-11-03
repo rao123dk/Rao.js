@@ -168,6 +168,30 @@ Rao.prototype.hasClass = function(hasClass){
 	
 }
 
+
+// For rao animation 
+
+Rao.prototype.slide = function(slide_type, speed){
+	//@ slide_type - up, down, and toggele
+	//@ speed - slow, medium, and fast
+	if(slide_type !== undefined && slide_type === "up"){
+		this.element.style.display = 'none';
+		this.element.style.opacity += 0.1;
+		
+	}
+
+	if(slide_type !== undefined && slide_type === "down"){
+		this.element.style.display = 'block';
+		this.element.style.opacity += 0.9;
+		
+	}
+
+	if(slide_type !== undefined && slide_type === "toggel"){
+		this.element.style.display = this.element.style.display === "block" ? this.element.style.display = "none" : this.element.style.display = "block";
+		
+	}
+}
+
 //trim method
 var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
 Rao.prototype.trim = function(){
@@ -179,6 +203,9 @@ Rao.prototype.r = {
 		return this.element;
 	}
 }
+
+
+
 
 //A universal object for external functions 
 window.r = {

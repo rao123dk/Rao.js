@@ -86,9 +86,9 @@ r.showWatch('#showwatch',"h","m","s",hour12=true);
 console.log(r.random(555555, 3333));
 
 // put length of random string you want
-console.log(r.randomString(80));
+	// console.log(r.randomString(80));
 
-console.log(r.randomString(80));
+	// console.log(r.randomString(80));
 //r.P2J("hello");
 //console.log(hello);
 
@@ -98,12 +98,12 @@ console.log(r.randomString(80));
 
 // window.addEventListener('click', myEfficientFn);
 
-console.log(r.browser());
+// console.log(r.browser());
 
-console.log(r.fetch("data.json"));
+// console.log(r.fetch("data.json"));
 //r.fetch("data.json");
 
-console.log(rao("#copyrightYear").hasClass("samplek"));
+//console.log(rao("#copyrightYear").hasClass("samplek"));
 
 
 
@@ -114,9 +114,9 @@ rao("#flip").on("click", function(){
 });
 
 
-// rao("#flip2").on("click", function(){
-// 	rao("#panel2").slide("down");
-// });
+rao("#flip2").on("click", function(){
+	rao("#panel2").slide("down", "slow");
+});
 
 
 // rao("#flip2").on("click", function(){

@@ -181,39 +181,63 @@ Rao.prototype.slide = function(slide_type, slide_speed){
 	if(slide_type !== undefined && slide_type === "up"){
 		this.element.style.display = 'none';
 		//this.element.style.opacity += 0.1;
-		this.speed(slide_speed,this.element);
+		this.speed(slide_speed , this.element , "up");
 		
 	}
 
 	if(slide_type !== undefined && slide_type === "down"){
 		this.element.style.display = 'block';
 		this.element.style.opacity += 0.9;
+		this.speed(slide_speed,this.element, "down");
 		
 	}
 
 	if(slide_type !== undefined && slide_type === "toggel"){
 		this.element.style.display = this.element.style.display === "block" ? this.element.style.display = "none" : this.element.style.display = "block";
-		this.speed(slide_speed,this.element);
+		//this.speed(slide_speed,this.element);
 	}
 }
 
-Rao.prototype.speed = function(_speed , _element){
-	let op = 1;
+Rao.prototype.speed = function(_speed , _element , _slide_type){
+	let op_up = 1;
+	let op_down = 0.1;
 	let _tr_rate;
-	//_tr_rate = (_speed === "slow" && typeof _speed === 'string') ? 1000 : _speed;
+	let slider_cond;
+	let slider_oper;
+	if(_speed === "slow"){ _tr_rate = 3000; }
+	if(_speed === "medium"){ _tr_rate = 300; }
+	if(_speed === "fast"){ _tr_rate = 100; }
+	console.log(_tr_rate);
+
+	function slider_case () {
+		let timer = setInterval(function () {
+			console.log("ok here 2");
+	        if (slider_cond){
+	            clearInterval(timer);
+	        }
+	        _element.style.opacity = op_up;
+	        slider_oper
+	    }, _tr_rate);	
+	}
+	
+	
+    switch(_slide_type){
+    	case "up":
+    	slider_cond = eval("op_up <= 0.1");
+    	slider_oper =  eval("op_up -= 0.1;");
+    	slider_case();
+    	break;
+
+    	case "down":
+    	slider_cond = eval("op_down => 1");
+    	slider_oper =  eval("op_down += 0.1;");
+    	slider_case();
+    	break;
+    }
+
+    //_tr_rate = (_speed === "slow" && typeof _speed === 'string') ? 1000 : _speed;
 	// _tr_rate = (_speed === "medium" && typeof _speed === 'string') ? 500 : _speed;
 	// _tr_rate = (_speed === "fast" && typeof _speed === 'string') ? 100 : _speed;
-
-	if(_speed === "slow"){ _tr_rate = 1000; }
-	console.log(_tr_rate);
-	let timer = setInterval(function () {
-		console.log("ok here 2");
-        if (op <= 0.1){
-            clearInterval(timer);
-        }
-        _element.style.opacity = op;
-        op -= 0.1;
-    }, _tr_rate);
 }
 
 

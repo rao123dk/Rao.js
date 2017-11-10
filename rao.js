@@ -440,6 +440,13 @@ window.r = {
 		result.push(k);
 		});
 		return result;
+	},
+	removeDuplicate : function(removeDuplicateArray){
+		let uniqueArray;
+		uniqueArray = removeDuplicateArray.filter(function(item, pos) {
+    		return removeDuplicateArray.indexOf(item) == pos;
+		});
+		return uniqueArray;
 	}
 }
 

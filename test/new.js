@@ -136,3 +136,5 @@ rao("#flip2").on("click", function(){
 // @ return duplicate items
 const array = ["a", "f", "e", "w", "r", "e", "o", "j", "j","w"];
 console.log(r.duplicate(array));
+
+console.log(r.removeDuplicate(array));

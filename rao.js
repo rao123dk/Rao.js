@@ -124,7 +124,7 @@ Rao.prototype.attri = function(key, value){
 	}	
 }
 
-//Hide and show element
+//Hide and show element and toggle(inOut)
 Rao.prototype.in = function(){
 	this.element.style.display = 'block';
 }
@@ -199,12 +199,13 @@ Rao.prototype.slide = function(slide_type, slide_speed){
 }
 
 Rao.prototype.speed = function(_speed , _element , _slide_type){
-	let op_up = 1;
-	let op_down = 0.1;
+	let op;
+	var op_up = 1;
+	var op_down = 0.1;
 	let _tr_rate;
 	let slider_cond;
 	let slider_oper;
-	if(_speed === "slow"){ _tr_rate = 3000; }
+	if(_speed === "slow"){ _tr_rate = 1000; }
 	if(_speed === "medium"){ _tr_rate = 300; }
 	if(_speed === "fast"){ _tr_rate = 100; }
 	console.log(_tr_rate);
@@ -212,25 +213,29 @@ Rao.prototype.speed = function(_speed , _element , _slide_type){
 	function slider_case () {
 		let timer = setInterval(function () {
 			console.log("ok here 2");
+			console.log(slider_cond);
+			console.log(op_up);
 	        if (slider_cond){
 	            clearInterval(timer);
 	        }
-	        _element.style.opacity = op_up;
-	        slider_oper
+	        _element.style.opacity = op;
+	        console.log(slider_oper);
 	    }, _tr_rate);	
 	}
 	
 	
     switch(_slide_type){
     	case "up":
-    	slider_cond = eval("op_up <= 0.1");
+    	slider_cond = eval("op_up === 0.1");
     	slider_oper =  eval("op_up -= 0.1;");
+    	op = op_up;
     	slider_case();
     	break;
 
     	case "down":
     	slider_cond = eval("op_down => 1");
     	slider_oper =  eval("op_down += 0.1;");
+    	op = op_down;
     	slider_case();
     	break;
     }
@@ -408,11 +413,33 @@ window.r = {
 		return M.join(' ');
 		
 	},
+	// @ impleneting Fetch (!think later)
 	fetch:function(curr_url){
 		fetch(curr_url)
 		.then(function(response){
 			response.json().then(function(data){ console.log(data); return { data } = data; });
 		});
+	},
+	duplicate:function(duplicateArray){
+		let arr = duplicateArray;//.split('');
+		let hash = new Map();
+		let result = [];
+		// If repeat the value is false, if no repeat the value is true
+		for (let i = 0; i < arr.length; i++) {
+			if (hash.get(arr[i]) === undefined) {
+				hash.set(arr[i], true);
+			}else {
+				let value = hash.get(arr[i]);
+				if (value) {
+					hash.set(arr[i], !value);
+				}
+			}
+		}
+		hash.forEach((v, k) => {
+		if (!v)
+		result.push(k);
+		});
+		return result;
 	}
 }
 

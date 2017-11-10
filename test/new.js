@@ -130,3 +130,9 @@ rao("#flip2").on("click", function(){
 
 //console.log(rao("#panel"));
 //console.log(rao("#panel").slide("up"));
+
+
+
+// @ return duplicate items
+const array = ["a", "f", "e", "w", "r", "e", "o", "j", "j","w"];
+console.log(r.duplicate(array));

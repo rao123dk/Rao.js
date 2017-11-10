@@ -421,31 +421,46 @@ window.r = {
 		});
 	},
 	duplicate:function(duplicateArray){
-		let arr = duplicateArray;//.split('');
-		let hash = new Map();
 		let result = [];
-		// If repeat the value is false, if no repeat the value is true
-		for (let i = 0; i < arr.length; i++) {
-			if (hash.get(arr[i]) === undefined) {
-				hash.set(arr[i], true);
-			}else {
-				let value = hash.get(arr[i]);
-				if (value) {
-					hash.set(arr[i], !value);
+		if(r.ES6()){
+			let arr = duplicateArray;
+			let hash = new Map();
+			// If repeat the value is false, if no repeat the value is true
+			for (let i = 0; i < arr.length; i++) {
+				if (hash.get(arr[i]) === undefined) {
+					hash.set(arr[i], true);
+				}else {
+					let value = hash.get(arr[i]);
+					if (value) {
+						hash.set(arr[i], !value);
+					}
 				}
 			}
-		}
 		hash.forEach((v, k) => {
-		if (!v)
-		result.push(k);
-		});
-		return result;
+			if (!v)
+				result.push(k);
+			});
+			return result;
+		}else{
+			//code if ES6 not
+			const strArr = duplicateArray.join('~').toLowerCase().split('~').sort().join("").match(/(.)\1+/g);
+  			if (strArr != null) {
+    			strArr.forEach((elem) => { result.push(elem[0]); });
+  			}
+			return result;
+		}
+		
 	},
 	removeDuplicate : function(removeDuplicateArray){
 		let uniqueArray;
-		uniqueArray = removeDuplicateArray.filter(function(item, pos) {
-    		return removeDuplicateArray.indexOf(item) == pos;
-		});
+		if(r.ES6()){
+			return uniqueArray = Array.from(new Set(removeDuplicateArray));
+		}else{
+			uniqueArray = removeDuplicateArray.filter(function(item, pos) {
+    			return removeDuplicateArray.indexOf(item) == pos;
+			});
+		}
+		
 		return uniqueArray;
 	},
 	ES6:function(){

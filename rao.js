@@ -447,6 +447,18 @@ window.r = {
     		return removeDuplicateArray.indexOf(item) == pos;
 		});
 		return uniqueArray;
+	},
+	ES6:function(){
+		if (typeof Symbol == "undefined") {
+			return false;
+		}
+		try { 
+			 eval("class RAORAO {}");
+        	 eval("let ORAORA = (x) => x+1");
+		}
+		catch (e) { return false; }
+
+		return true;
 	}
 }
 

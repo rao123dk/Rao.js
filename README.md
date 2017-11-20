@@ -78,6 +78,7 @@ console.log(r.upper(str,"1++"));
 console.log(r.upper(str,">1"));
 ```
 3. Preserve the case of the original word when you are replacing it. For example if you mean to replace the word "Book" with the word "pen", it should be replaced as "Pen".
+ :hotsprings:
 ```
 let org_str = "This is my Book.",
 console.log(r.rao_replace(org_str, "Book", "pen"));
@@ -120,7 +121,7 @@ exp:-
 <span id="myid" data-myperonalId="177466"></span>
 console.log(rao("#myid").Data("myperonalId"));
 ```
-### detect Client Browser name and version
+### Detect Client Browser name and version
  :hotsprings:
 ```
 Simply call "r.browser();" 
@@ -129,4 +130,15 @@ console.log(r.browser());
 Output :- Chrome 62
 
 ```
+### Print current year 
+This method is helpful for those who manually update copyright year on webiste  
+```
+rao("#copyrightYear").currentYear();
+```
+### Add / Remove class to/from element
+```
+rao("#id").addClass("newclass");
+rao("#id").removeClass("alreadyThere");
+```
+
 

@@ -79,7 +79,7 @@ console.log(r.rao_replace("hello How are you", "How", "hhhhh"));
 console.dir(rao('#txt'));
 
 
-r.showWatch('#showwatch',"h","m","s",hour12=true);
+r.showWatch('#showwatch',"h","m","s",hour12=false);
 //r.keycode(); // for checking keycode
 
 //put any two numbers in between

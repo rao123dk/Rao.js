@@ -208,18 +208,18 @@ Rao.prototype.speed = function(_speed , _element , _slide_type){
 	if(_speed === "slow"){ _tr_rate = 1000; }
 	if(_speed === "medium"){ _tr_rate = 300; }
 	if(_speed === "fast"){ _tr_rate = 100; }
-	console.log(_tr_rate);
+	//console.log(_tr_rate);
 
 	function slider_case () {
 		let timer = setInterval(function () {
-			console.log("ok here 2");
-			console.log(slider_cond);
-			console.log(op_up);
+			//console.log("ok here 2");
+			//console.log(slider_cond);
+			//console.log(op_up);
 	        if (slider_cond){
 	            clearInterval(timer);
 	        }
 	        _element.style.opacity = op;
-	        console.log(slider_oper);
+	        //console.log(slider_oper);
 	    }, _tr_rate);	
 	}
 	
@@ -316,7 +316,8 @@ window.r = {
 			this.mm = d.getMinutes();
 			this.ss = d.getSeconds();
 			this.ampm = this.hh >= 12 ? 'PM' : 'AM';
-			this.hh = this.hh % 12;
+			this.hh2 = this.hh % 12;
+			this.hh = hour12 ? this.hh2 : this.hh;
 			this.hh = this.hh ? this.hh : 12;
 			this.displayTime=0;
 			if(selector !== undefined && h === "h" && m === "m" && s === "s"){

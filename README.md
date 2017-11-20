@@ -120,5 +120,13 @@ exp:-
 <span id="myid" data-myperonalId="177466"></span>
 console.log(rao("#myid").Data("myperonalId"));
 ```
+### detect Client Browser name and version
+ :hotsprings:
+```
+Simply call "r.browser();" 
+Exp:-
+console.log(r.browser());
+Output :- Chrome 62
 
+```
 

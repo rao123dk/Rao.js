@@ -100,5 +100,25 @@ console.log(rao('#sr').attri("class"));
 Output:- 
 It will return classname of element which is is 'sr'
 ```
+### Hide, show and toggle(hide/show) element
+Hide 
+```
+rao('#id').out();
+```
+show 
+```
+rao('#id').in();
+```
+toggle 
+```
+rao('#id').inOut();
+```
+### Get custom attribute(data-myperonalId) value
+```
+console.log(rao("#id").Data("customAttribute"));
+exp:- 
+<span id="myid" data-myperonalId="177466"></span>
+console.log(rao("#myid").Data("myperonalId"));
+```
 
 

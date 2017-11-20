@@ -45,6 +45,10 @@ txt.html(); //Get
 rao('#id').append("<div>Hello append</div>");
 rao('#id').prepend("<div>Hello prepend</div>");
 ```
+### Find all child elements of parent element
+```
+rao('#parentid').mychild();
+```
 
 ### Events
 ```

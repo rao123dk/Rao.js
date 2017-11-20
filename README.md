@@ -77,4 +77,9 @@ var str = "javaScript often abbreviated as JS, is a high-level, dynamic, weakly 
 console.log(r.upper(str,"1++"));
 console.log(r.upper(str,">1"));
 ```
-
+3. Preserve the case of the original word when you are replacing it. For example if you mean to replace the word "Book" with the word "pen", it should be replaced as "Pen".
+```
+let org_str = "This is my Book.",
+console.log(r.rao_replace(org_str, "Book", "pen"));
+Output :- This is my Pen.
+```

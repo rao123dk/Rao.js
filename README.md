@@ -83,3 +83,22 @@ let org_str = "This is my Book.",
 console.log(r.rao_replace(org_str, "Book", "pen"));
 Output :- This is my Pen.
 ```
+### Get/set attribute dynamically from/in element
+Set own attribute
+```
+rao('#sr').attri("attribue","value");
+exp:- 
+rao('#sr').attri("custom_id","12CU100");
+output :- 
+<span id="sr" custom_id ="12CU100"> </span>
+```
+Get attribue
+```
+rao('#sr').attri("nameofattribue")
+exp:- 
+console.log(rao('#sr').attri("class"));
+Output:- 
+It will return classname of element which is is 'sr'
+```
+
+

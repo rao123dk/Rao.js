@@ -154,7 +154,7 @@ rao("#id").removeClass("alreadyThere");
  console.log(r.showWatch('#showwatchid',"h","m","s",hour12=false));
  output:- 13:8:58 
  console.log(r.showWatch('#showwatchid',"h","m",hour12=true));
- output:- 1:8 PM
+ output:- 11:19 AM
  
  ```
 

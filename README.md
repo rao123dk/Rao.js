@@ -144,5 +144,14 @@ rao("#copyrightYear").currentYear();
 rao("#id").addClass("newclass");
 rao("#id").removeClass("alreadyThere");
 ```
-
+### Digital watch by single line of code
+ :hotsprings:
+ ```
+ r.showWatch('#showwatchid',"h","m","s",hour12=true);
+ exp:- 
+ console.log(r.showWatch('#showwatchid',"h","m","s",hour12=true));
+ output:- 1:8:58 PM
+ console.log(r.showWatch('#showwatchid',"h","m","s",hour12=false));
+ output:- 1:8:58 PM
+ ```
 

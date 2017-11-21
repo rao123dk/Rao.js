@@ -141,3 +141,12 @@ console.log(r.removeDuplicate(array));
 
 //ES6 detection
 console.log(r.ES6());
+
+
+//r.countDown(1,1,2018)
+// setInterval(function(){
+// 	console.log(r.countDown(22,11,2017));
+// },1000);
+
+
+console.log(r.countDown(22,11,2017));

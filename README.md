@@ -157,4 +157,14 @@ rao("#id").removeClass("alreadyThere");
  output:- 11:19 AM
  
  ```
+ ### JavaScript New Feature checker(i.e. It will check, is your browser support new fetaure of not ?) Like ECMAScript 2015/2016/2017 or ES6/ES7/ES8
+ :hotsprings:
+ ```
+	console.log(r.ES6());
+	console.log(r.ES7());
+	console.log(r.ES8());
+
+	Output :- True/false
+
+ ```
 

@@ -464,6 +464,7 @@ window.r = {
 		
 		return uniqueArray;
 	},
+	//ECMAScript 2015
 	ES6:function(){
 		if (typeof Symbol == "undefined") {
 			return false;
@@ -475,6 +476,16 @@ window.r = {
 		catch (e) { return false; }
 
 		return true;
+	},
+	//ECMAScript 2016
+	ES7:function (){
+		var raojs_array = [1, 2, 3];
+		try {
+		    raojs_array.includes(2); return true;
+		}
+		catch (err) {
+		    return false;
+		}
 	},
 	countDown : function (targetDate, targetMonth, targetYear) {
 		var targetCountDown = targetMonth+ " " + targetDate+ " " + targetYear+ " " + "23:59:59";

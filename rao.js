@@ -487,6 +487,18 @@ window.r = {
 		    return false;
 		}
 	},
+	//ECMAScript 2017
+	ES8:function (){
+		let obj = { lib: 'Rao.js', version: '1.0.0' };
+		try {
+			let a = Object.values(obj); 
+			let b = Object.entries(obj);
+			return true;
+		}
+		catch (err) {
+			return false;
+		}
+	},
 	countDown : function (targetDate, targetMonth, targetYear) {
 		var targetCountDown = targetMonth+ " " + targetDate+ " " + targetYear+ " " + "23:59:59";
 		var targetCountDown = Date.parse(targetCountDown); 

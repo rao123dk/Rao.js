@@ -142,7 +142,7 @@ console.log(r.removeDuplicate(array));
 //ES6 detection
 console.log(r.ES6());
 console.log(r.ES7());
-//console.log(r.ES8());
+console.log(r.ES8());
 
 
 //r.countDown(1,1,2018)

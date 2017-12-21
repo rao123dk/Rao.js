@@ -516,6 +516,34 @@ window.r = {
 	    	'seconds': seconds
 		};
 		
+	},
+	//for time,day and year
+	now : function(what){
+		if(what === undefined) return new Date(Date.now()).toLocaleDateString(); //new Date();
+		this.what = what.toLowerCase();
+	 switch(this.what){
+	 	case "day" :
+	 		return new Date().toDateString().split(" ")[0]; //["Thu", "Dec", "21", "2017"]
+	 		break;
+	 	case "month" : 
+	 		return new Date().toDateString().split(" ")[1];
+	 		break;
+ 		case "date" : 
+	 		return new Date().toDateString().split(" ")[2];
+	 		break;
+ 		case "year" : 
+	 		return new Date().toDateString().split(" ")[2];
+	 		break;
+	 }
+	},
+	dateFormater : function(target_date){
+
+	},
+	dayDiff : function(start_date, end_date){ 
+		this.start_date = new Date(start_date);
+		this.end_date = new Date(end_date);
+		var oneDay = 1000 * 60 * 60 * 24;
+        return Math.floor(this.end_date.getTime() / oneDay) - Math.floor(this.start_date.getTime() / oneDay);
 	}
 }
 

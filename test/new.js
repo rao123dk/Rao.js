@@ -144,6 +144,15 @@ console.log(r.ES6());
 console.log(r.ES7());
 console.log(r.ES8());
 
+// for date,time , year
+	// console.log(r.now());
+	// console.log(r.now("day"));
+	// console.log(r.now("month"));
+	// console.log(r.now("year"));
+
+console.log(r.dayDiff("01/01/2018","03/01/2018")); // DD/MM/YYYY
+
+
 
 //r.countDown(1,1,2018)
 // setInterval(function(){

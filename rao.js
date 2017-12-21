@@ -559,27 +559,23 @@ window.r = {
 		// Subtract two weekend days for every week in between
 		var weeks = Math.floor(days / 7);
 		days = days - (weeks * 2);
-
 		// Handle special cases
 		var startDay = this.start_date.getDay();
 		var endDay = this.end_date.getDay();
-
 		// Remove weekend not previously removed.   
 		if (startDay - endDay > 1)         
 		days = days - 2;      
-
 		// Remove start day if span starts on Sunday but ends before Saturday
 		if (startDay === 0 && endDay != 6)
 		days = days - 1 ;
-		    
 		// Remove end day if span ends on Saturday but starts after Sunday
 		if (endDay === 6 && startDay !== 0)
 		days = days - 1  ;
 
 		return days;
 	}
-	//Object window.r end here
-}
+	
+} //Object window.r end here
 
 
 // for find children

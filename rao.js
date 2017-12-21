@@ -536,15 +536,49 @@ window.r = {
 	 		break;
 	 }
 	},
-	dateFormater : function(target_date){
-
+	dateFormater : function(target_date){ //coming DD/MM/YYYY transform into MM/DD/YYYY
+		var formater = target_date.split("/");
+		var final_date = ""+ formater[1] + "/" + formater[0] + "/" + formater[2];
+		return final_date;
 	},
-	dayDiff : function(start_date, end_date){ 
-		this.start_date = new Date(start_date);
-		this.end_date = new Date(end_date);
+	dayDiff : function(start_date, end_date){ //r.dateFormater(start_date);
+		this.start_date = new Date(r.dateFormater(start_date));
+		this.end_date = new Date(r.dateFormater(end_date));
 		var oneDay = 1000 * 60 * 60 * 24;
         return Math.floor(this.end_date.getTime() / oneDay) - Math.floor(this.start_date.getTime() / oneDay);
+	},
+	dayDiffSatSun:function(start_date, end_date){
+		this.start_date = new Date(r.dateFormater(start_date));
+		this.end_date = new Date(r.dateFormater(end_date));
+		var millisecondsPerDay = 86400 * 1000;
+		this.start_date.setHours(0,0,0,1);  
+		this.end_date.setHours(23,59,59,999);  
+		var diff = this.end_date - this.start_date;     
+		var days = Math.ceil(diff / millisecondsPerDay);
+
+		// Subtract two weekend days for every week in between
+		var weeks = Math.floor(days / 7);
+		days = days - (weeks * 2);
+
+		// Handle special cases
+		var startDay = this.start_date.getDay();
+		var endDay = this.end_date.getDay();
+
+		// Remove weekend not previously removed.   
+		if (startDay - endDay > 1)         
+		days = days - 2;      
+
+		// Remove start day if span starts on Sunday but ends before Saturday
+		if (startDay === 0 && endDay != 6)
+		days = days - 1 ;
+		    
+		// Remove end day if span ends on Saturday but starts after Sunday
+		if (endDay === 6 && startDay !== 0)
+		days = days - 1  ;
+
+		return days;
 	}
+	//Object window.r end here
 }
 
 

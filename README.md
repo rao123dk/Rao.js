@@ -1,5 +1,6 @@
 # Rao.js
-
+### [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/rao123dk/Rao.js/issues)
+[![HitCount](http://hits.dwyl.io/rao123dk/Rao.js.svg)](http://hits.dwyl.io/rao123dk/Rao.js)
 ## CDN
 ```javascript
 CDN for production:- 

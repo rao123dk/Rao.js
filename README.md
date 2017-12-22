@@ -168,3 +168,37 @@ rao("#id").removeClass("alreadyThere");
 
  ```
 
+ ### Get Random Number between two given numbers
+ ```
+    // r.random(first_digit, last_digit)
+   console.log(r.random(10, 111));
+   Output :- 29 or different 
+ ```
+
+ ### Random String generator(i.e. also strong password generator )
+ :hotsprings:
+ ```
+   // r.randomString(length_of_string)
+   console.log(r.randomString(8));
+   Output :- g485edgn or differnt
+ ```
+
+ ### Duplicate Items in Array
+  1. Return duplicate items
+  :hotsprings:
+  ```
+   // r.duplicate(Array_name);
+   Ex:- const array = ["a", "f", "e", "w", "r", "e", "o", "j", "j","w"];
+   console.log(r.duplicate(array));
+   Output :- ["e", "w", "j"]
+  ```
+
+  2. Remove duplicate items from array
+  :hotsprings:
+  ```
+   // r.duplicate(Array_name);
+   Ex:- const array = ["a", "f", "e", "w", "r", "e", "o", "j", "j","w"];
+   console.log(r.removeDuplicate(array));
+   Output :- ["a", "f", "e", "w", "r", "o", "j"]
+  ```
+

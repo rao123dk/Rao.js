@@ -83,10 +83,10 @@ r.showWatch('#showwatch',"h","m","s",hour12=false);
 //r.keycode(); // for checking keycode
 
 //put any two numbers in between
-console.log(r.random(555555, 3333));
+console.log(r.random(11, 100));
 
 // put length of random string you want
-	// console.log(r.randomString(80));
+	//console.log(r.randomString(8));
 
 	// console.log(r.randomString(80));
 //r.P2J("hello");

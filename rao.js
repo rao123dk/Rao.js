@@ -508,6 +508,8 @@ window.r = {
 	    var minutes = Math.floor( (t/1000/60) % 60 );
 	    var hours = Math.floor( (t/(1000*60*60)) % 24 );
 	    var days = Math.floor( t/(1000*60*60*24) );
+	    console.log(t);
+	    if(t < 0) { return " 0:0:0 {Sorry Sir, Forgot your past, And go ahead!}" ; }
 	    return {
 	    	'total': t,
 	    	'days': days,

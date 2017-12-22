@@ -233,9 +233,11 @@ rao("#id").removeClass("alreadyThere");
  	console.log("Coming soon.....");
 ```
 
-#### Countdown Timer 
+#### Countdown Timer
+:hotsprings: 
 ```javascript
 	console.log(r.countDown(01,01,2018)); // Format will be DD/MM/YYYY
+	Output :- {total: 896620000, days: 10, hours: 9, minutes: 3, seconds: 40}
 
 ```
 

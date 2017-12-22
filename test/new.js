@@ -150,8 +150,8 @@ console.log(r.ES8());
 	// console.log(r.now("month"));
 	// console.log(r.now("year"));
 
-console.log(r.dayDiff("01/01/2018","03/01/2018")); // DD/MM/YYYY // MM/DD/YYYY(IST)
-console.log(r.dayDiffSatSun("01/01/2018","11/01/2018"));
+console.log(r.dayDiff("21/12/2017","30/12/2017")); // DD/MM/YYYY // MM/DD/YYYY(IST)
+console.log(r.dayDiffSatSun("21/12/2017","30/12/2017"));
 
 
 

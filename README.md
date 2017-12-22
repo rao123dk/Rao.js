@@ -88,8 +88,10 @@ let org_str = "This is my Book.",
 console.log(r.rao_replace(org_str, "Book", "pen"));
 Output :- This is my Pen.
 ```
+
 ### Get/set attribute dynamically from/in element
 Set own attribute
+
 ```
 rao('#sr').attri("attribue","value");
 exp:- 
@@ -118,6 +120,7 @@ toggle
 ```
 rao('#id').inOut();
 ```
+
 ### Get custom attribute(data-myperonalId) value
 ```
 console.log(rao("#id").Data("customAttribute"));
@@ -125,6 +128,7 @@ exp:-
 <span id="myid" data-myperonalId="177466"></span>
 console.log(rao("#myid").Data("myperonalId"));
 ```
+
 ### Detect Client Browser name and version
  :hotsprings:
 ```
@@ -134,16 +138,19 @@ console.log(r.browser());
 Output :- Chrome 62
 
 ```
+
 ### Print current year 
 This method is helpful for those who manually update copyright year on webiste  
 ```
 rao("#copyrightYear").currentYear();
 ```
+
 ### Add / Remove class to/from element
 ```
 rao("#id").addClass("newclass");
 rao("#id").removeClass("alreadyThere");
 ```
+
 ### Digital watch by single line of code
  :hotsprings:
  ```
@@ -157,7 +164,8 @@ rao("#id").removeClass("alreadyThere");
  output:- 11:19 AM
  
  ```
- ### JavaScript New Feature checker(i.e. It will check, is your browser support new fetaure of not ?) Like ECMAScript 2015/2016/2017 or ES6/ES7/ES8
+
+### JavaScript New Feature checker(i.e. It will check, is your browser support new fetaure of not ?) Like ECMAScript 2015/2016/2017 or ES6/ES7/ES8
  :hotsprings:
  ```
 	console.log(r.ES6());
@@ -175,7 +183,7 @@ rao("#id").removeClass("alreadyThere");
    Output :- 29 or different 
  ```
 
- ### Random String generator(i.e. also strong password generator )
+### Random String generator(i.e. also strong password generator )
  :hotsprings:
  ```
    // r.randomString(length_of_string)
@@ -183,7 +191,7 @@ rao("#id").removeClass("alreadyThere");
    Output :- g485edgn or differnt
  ```
 
- ### Duplicate Items in Array
+### Duplicate Items in Array
   1. Return duplicate items
   :hotsprings:
   ```
@@ -201,4 +209,33 @@ rao("#id").removeClass("alreadyThere");
    console.log(r.removeDuplicate(array));
    Output :- ["a", "f", "e", "w", "r", "o", "j"]
   ```
+
+### Difference between two Dates 
+ 1. Get difference between two date {General}
+ :hotsprings:
+ ```javascript
+ 	// r.dayDiff("Start_date","end_date")); // Format will be DD/MM/YYYY
+ 	console.log(r.dayDiff("21/12/2017","30/12/2017")); 
+ 	Output :- 9
+ ```
+
+ 2. Get difference between two date{ escape Saturday and Sunday i.e. count only working days}
+  :hotsprings:
+ ```javascript
+ 	// r.dayDiffSatSun("Start_date","end_date")); // Format will be DD/MM/YYYY
+ 	console.log(r.dayDiffSatSun("21/12/2017","30/12/2017")); 
+ 	Output :- 7
+ ```
+
+ 2. Get difference between two date{ escape Saturday and Sunday i.e. count only working days and consider hoilday also}
+  :hotsprings:
+ ```
+ 	Coming soon.....
+ ```
+
+#### Count Down watch 
+```javascript
+
+```
+
 

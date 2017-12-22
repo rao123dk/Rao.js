@@ -228,7 +228,7 @@ rao("#id").removeClass("alreadyThere");
  	Output :- 7
 ```
 
- 3. Get difference between two date{ escape Saturday and Sunday i.e. count only working days and consider hoilday also}
+ 3. Get difference between two date{ escape Saturday, Sunday and *holiday festival* also}
   :hotsprings:
 ```javascript
  	console.log("Coming soon.....");

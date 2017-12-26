@@ -125,7 +125,7 @@ rao('#id').inOut();
 ### Get custom attribute(data-myperonalId) value
 ```javascript
 console.log(rao("#id").Data("customAttribute"));
-exp:- 
+ex:- 
 <span id="myid" data-myperonalId="177466"></span>
 console.log(rao("#myid").Data("myperonalId"));
 ```
@@ -134,7 +134,7 @@ console.log(rao("#myid").Data("myperonalId"));
  :hotsprings:
 ```javascript
 Simply call "r.browser();" 
-Exp:-
+ex:-
 console.log(r.browser());
 Output :- Chrome 62
 
@@ -156,7 +156,7 @@ rao("#id").removeClass("alreadyThere");
  :hotsprings:
 ```javascript
  r.showWatch('#showwatchid',"h","m","s",hour12=true);
- Ex:- 
+ ex:- 
  console.log(r.showWatch('#showwatchid',"h","m","s",hour12=true));
  output:- 1:8:58 PM
  console.log(r.showWatch('#showwatchid',"h","m","s",hour12=false));
@@ -172,8 +172,7 @@ rao("#id").removeClass("alreadyThere");
  	console.log(r.ES6());
 	console.log(r.ES7());
 	console.log(r.ES8());
-
-	Output :- True/false
+	Output :- true/false
 
 ```
 

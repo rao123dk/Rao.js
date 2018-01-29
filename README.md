@@ -139,6 +139,15 @@ console.log(r.browser());
 Output :- Chrome 62
 
 ```
+### Detect Device type
+ :hotsprings:
+```javascript
+Simply call "r.deviceType()" 
+ex:-
+console.log(r.deviceType());
+Output :- Desktop
+
+```
 
 ### Print current year 
 This method is helpful for those who manually update copyright year on webiste  

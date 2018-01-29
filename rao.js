@@ -385,19 +385,6 @@ window.r = {
 
 	//for browser
 	browser:function(){
-		// if(!!window.chrome && !!window.chrome.webstore){
-		// 	return "Chrome";
-		// }else if(typeof InstallTrigger !== 'undefined'){
-		// 	return "Firefox";
-		// }else if((/constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification))){
-		// 	return "Safari";
-		// }else if((!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0){
-		// 	return "Opera";
-		// }else if(/*@cc_on!@*/false || !!document.documentMode){
-		// 	return "IE";
-		// }else if(!isIE && !!window.StyleMedia){
-		// 	return "Edge";
-		// }
 
 		var ua= navigator.userAgent, tem, 
 		M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
@@ -413,6 +400,9 @@ window.r = {
 		if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
 		return M.join(' ');
 		
+	},
+	deviceType : function(){
+  		return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop';
 	},
 	// @ impleneting Fetch (!think later)
 	fetch:function(curr_url){

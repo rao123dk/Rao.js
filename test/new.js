@@ -163,3 +163,5 @@ console.log(r.dayDiffSatSun("21/12/2017","30/12/2017"));
 
 console.log(r.countDown(01,01,2018));
 console.log(r.countDown(21,12,2017));
+
+console.log(r.deviceType()); //detect device type

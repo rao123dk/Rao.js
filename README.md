@@ -53,12 +53,15 @@ console.log(r.duplicate(array));
 Output :- ["e", "w", "j"]
 ```
 #### Remove duplicate items from array
-  :hotsprings:
+Code:- 
 ```javascript
-   // r.duplicate(Array_name);
-   Ex:- const array = ["a", "f", "e", "w", "r", "e", "o", "j", "j","w"];
-   console.log(r.removeDuplicate(array));
-   Output :- ["a", "f", "e", "w", "r", "o", "j"]
+r.duplicate(arrayName);
+```
+Example:-
+```javascript
+var array = ["a", "f", "e", "w", "r", "e", "o", "j", "j","w"];
+console.log(r.removeDuplicate(array));
+Output :- ["a", "f", "e", "w", "r", "o", "j"]
 ```
 # Object
 # DOM

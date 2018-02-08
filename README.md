@@ -11,6 +11,9 @@ CDN for development
 <script src="https://rawgit.com/rao123dk/Rao.js/master/rao.js"> </script> 
 
 ```
+# Table of Contents
+ * [Browser](#browser)
+ * [Array](#array)
 
 ### Get Element by id
 ```javascript
@@ -33,6 +36,7 @@ var ht = rao('#htm');
 ht.html("<p>hello html here</p>"); //Set
 ht.html(); //Get
 ```
+# Browser
 
 ### Get/Set text 
 ```javascript

@@ -14,7 +14,17 @@ CDN for development
 # Table of Contents
  * [Browser](#browser)
  * [Array](#array)
+ * [Object](#object)
+ * [DOM](#dom)
+ * [Time](#time)
+ * [String](#string)
 
+# Browser
+# Array
+# Object
+# DOM
+# Time
+# String
 ### Get Element by id
 ```javascript
 var a = rao("#id");
@@ -36,7 +46,6 @@ var ht = rao('#htm');
 ht.html("<p>hello html here</p>"); //Set
 ht.html(); //Get
 ```
-# Browser
 
 ### Get/Set text 
 ```javascript

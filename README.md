@@ -20,12 +20,51 @@ CDN for development
  * [String](#string)
 
 # Browser
+#### Detect Client Browser name and version
+ Code:-
+```javascript
+r.browser();
+```
+Example:-
+```javascript
+console.log(r.browser());
+Output :- Chrome 62(Broweser Name, Version)
+```
+#### Detect Device type
+Code:-
+```javascript
+r.deviceType();
+```
+Example:-
+```javascript
+console.log(r.deviceType());
+Output :- Desktop/Mobile
+```
 # Array
+#### Check duplicate items
+Code:-
+```javascript
+r.duplicate(Array_name);
+```
+Example:-
+```javascript
+const array = ["a", "f", "e", "w", "r", "e", "o", "j", "j","w"];
+console.log(r.duplicate(array));
+Output :- ["e", "w", "j"]
+```
+#### Remove duplicate items from array
+  :hotsprings:
+```javascript
+   // r.duplicate(Array_name);
+   Ex:- const array = ["a", "f", "e", "w", "r", "e", "o", "j", "j","w"];
+   console.log(r.removeDuplicate(array));
+   Output :- ["a", "f", "e", "w", "r", "o", "j"]
+```
 # Object
 # DOM
 # Time
 # String
-### Get Element by id
+#### Get Element by id
 ```javascript
 var a = rao("#id");
 console.log(a.val());
@@ -143,24 +182,7 @@ ex:-
 console.log(rao("#myid").Data("myperonalId"));
 ```
 
-### Detect Client Browser name and version
- :hotsprings:
-```javascript
-Simply call "r.browser();" 
-ex:-
-console.log(r.browser());
-Output :- Chrome 62
 
-```
-### Detect Device type
- :hotsprings:
-```javascript
-Simply call "r.deviceType()" 
-ex:-
-console.log(r.deviceType());
-Output :- Desktop
-
-```
 
 ### Print current year 
 This method is helpful for those who manually update copyright year on webiste  
@@ -213,24 +235,7 @@ rao("#id").removeClass("alreadyThere");
    Output :- g485edgn or differnt
 ```
 
-### Duplicate Items in Array
-  1. Return duplicate items
-  :hotsprings:
-```javascript
-   // r.duplicate(Array_name);
-   Ex:- const array = ["a", "f", "e", "w", "r", "e", "o", "j", "j","w"];
-   console.log(r.duplicate(array));
-   Output :- ["e", "w", "j"]
-```
 
-  2. Remove duplicate items from array
-  :hotsprings:
-```javascript
-   // r.duplicate(Array_name);
-   Ex:- const array = ["a", "f", "e", "w", "r", "e", "o", "j", "j","w"];
-   console.log(r.removeDuplicate(array));
-   Output :- ["a", "f", "e", "w", "r", "o", "j"]
-```
 
 ### Difference between two Dates 
  1. Get difference between two date {General}

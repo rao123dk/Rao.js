@@ -94,6 +94,16 @@ Output:- 13:8:58
 console.log(r.showWatch('#showwatchid',"h","m",hour12=true));
 Output:- 1:08 PM
 ```
+#### Countdown Timer
+Code:- 
+```javascript
+r.countDown(01,01,2018)
+```
+Example:-
+```javascript
+console.log(r.countDown(01,01,2018)); // Format will be DD/MM/YYYY
+Output :- {total: 896620000, days: 10, hours: 9, minutes: 3, seconds: 40}
+```
 # String
 # DOM
 #### Get element by id
@@ -331,13 +341,6 @@ rao("#id").removeClass("alreadyThere");
  	console.log("Coming soon.....");
 ```
 
-#### Countdown Timer
-:hotsprings: 
-```javascript
-	console.log(r.countDown(01,01,2018)); // Format will be DD/MM/YYYY
-	Output :- {total: 896620000, days: 10, hours: 9, minutes: 3, seconds: 40}
-
-```
 
 #### Thanks!
 ```javascript

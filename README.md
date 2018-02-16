@@ -106,24 +106,64 @@ console.log(exp[0].val());
 Output :- Rao
 ```
 
-### Get/Set html 
+#### Get/Set html 
+Code:- 
 ```javascript
 var ht = rao('#htm');
-ht.html("<p>hello html here</p>"); //Set
-ht.html(); //Get
+ht.html();
+ht.html('<p>Thanks for using Rao.js</p>');
 ```
-
-### Get/Set text 
+Example:-
 ```javascript
-var txt = rao('#txt');
-txt.text("hello text here"); //Set
-txt.html(); //Get
+<div id="htm"> </div>
+var ht = rao('#htm');
+ht.html("<p>Thanks for using Rao.js</p>"); //Set
+Output :- <div id="htm"> <p>Thanks for using Rao.js</p> </div>
+ht.html(); //Get
+Output :- <p>Thanks for using Rao.js</p>
 ```
 
-### Append/Prepend Elements
+#### Get/Set text 
+Code:- 
+```javascript
+var tx = rao('#txt');
+tx.text();
+tx.text('Thanks for using Rao.js');
+```
+Example:-
+```javascript
+<p id="txt"> </p>
+var tx = rao('#htm');
+tx.text("Thanks for using Rao.js"); //Set
+Output :- <p id="htm">Thanks for using Rao.js</p>
+tx.text(); //Get
+Output :- Thanks for using Rao.js
+```
+#### Append/Prepend elements
+Code:- 
 ```javascript
 rao('#id').append("<div>Hello append</div>");
 rao('#id').prepend("<div>Hello prepend</div>");
+```
+Example:-
+```html
+<div class="parent">
+  <div id="id"> Hello</div>
+</div>
+```
+```javascript
+rao('#id').append("<div>Hello append</div>");
+Output :- 
+<div class="parent">
+  <div id="id"> Hello</div>
+  <div>Hello append</div>
+</div>
+rao('#id').prepend("<div>Hello prepend</div>");
+Output :- 
+<div class="parent">
+  <div>Hello prepend</div>
+  <div id="id"> Hello</div>
+</div>
 ```
 ### Find all child elements of parent element
 ```javascript

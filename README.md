@@ -41,6 +41,20 @@ Example:-
 console.log(r.deviceType());
 Output :- Desktop/Mobile
 ```
+#### JavaScript new feature browser compatibility checker(i.e. ECMAScript 2015/2016/2017)
+Code:- 
+```javascript
+r.ES6()
+r.ES7()
+r.ES8()
+```
+Example:-
+```javascript
+console.log(r.ES6());
+console.log(r.ES7());
+console.log(r.ES8());
+Output :- true/false
+```
 # Array
 #### Check duplicate items
 Code:-
@@ -66,6 +80,20 @@ Output :- ["a", "f", "e", "w", "r", "o", "j"]
 ```
 # Object
 # Time
+#### Digital watch
+Code:- 
+```javascript
+r.showWatch('#showwatchid',"h","m","s",hour12=true/false);
+```
+Example:-
+```javascript
+console.log(r.showWatch('#showwatchid',"h","m","s",hour12=true));
+Output:- 1:8:58 PM
+console.log(r.showWatch('#showwatchid',"h","m","s",hour12=false));
+Output:- 13:8:58 
+console.log(r.showWatch('#showwatchid',"h","m",hour12=true));
+Output:- 1:08 PM
+```
 # String
 # DOM
 #### Get element by id
@@ -261,30 +289,6 @@ rao("#copyrightYear").currentYear();
 ```javascript
 rao("#id").addClass("newclass");
 rao("#id").removeClass("alreadyThere");
-```
-
-### Digital watch by single line of code
- :hotsprings:
-```javascript
- r.showWatch('#showwatchid',"h","m","s",hour12=true);
- ex:- 
- console.log(r.showWatch('#showwatchid',"h","m","s",hour12=true));
- output:- 1:8:58 PM
- console.log(r.showWatch('#showwatchid',"h","m","s",hour12=false));
- output:- 13:8:58 
- console.log(r.showWatch('#showwatchid',"h","m",hour12=true));
- output:- 11:19 AM
- 
-```
-
-### JavaScript New Feature checker(i.e. It will check, is your browser support new fetaure of not ?) Like ECMAScript 2015/2016/2017 or ES6/ES7/ES8
- :hotsprings:
-```javascript
- 	console.log(r.ES6());
-	console.log(r.ES7());
-	console.log(r.ES8());
-	Output :- true/false
-
 ```
 
  ### Get Random Number between two given numbers

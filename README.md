@@ -105,6 +105,16 @@ console.log(r.countDown(01,01,2018)); // Format will be DD/MM/YYYY
 Output :- {total: 896620000, days: 10, hours: 9, minutes: 3, seconds: 40}
 ```
 # String
+#### Random string generator(i.e. also password generator)
+Code:- 
+```javascript
+r.randomString(length_of_string)
+```
+Example:-
+```javascript
+console.log(r.randomString(8));
+Output :- g485edgn
+```
 # DOM
 #### Get element by id
 Code:- 
@@ -307,17 +317,6 @@ rao("#id").removeClass("alreadyThere");
    console.log(r.random(10, 111));
    Output :- 29 or different 
 ```
-
-### Random String generator(i.e. also strong password generator )
- :hotsprings:
-```javascript
-   // r.randomString(length_of_string)
-   console.log(r.randomString(8));
-   Output :- g485edgn or differnt
-```
-
-
-
 ### Difference between two Dates 
  1. Get difference between two date {General}
  :hotsprings:

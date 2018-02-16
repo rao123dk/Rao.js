@@ -15,9 +15,10 @@ CDN for development
  * [Browser](#browser)
  * [Array](#array)
  * [Object](#object)
- * [DOM](#dom)
  * [Time](#time)
  * [String](#string)
+ * [DOM](#dom)
+ 
 
 # Browser
 #### Detect Client Browser name and version
@@ -64,22 +65,45 @@ console.log(r.removeDuplicate(array));
 Output :- ["a", "f", "e", "w", "r", "o", "j"]
 ```
 # Object
-# DOM
 # Time
 # String
-#### Get Element by id
+# DOM
+#### Get element by id
+Code:- 
 ```javascript
-var a = rao("#id");
-console.log(a.val());
+rao("#id");
 ```
-### Get Element by Class
+Example:-
 ```javascript
-var a = rao(".class");
+<input type ="text" id="f_name" value="Dheeraj">
+var exp = rao("#f_name");
+console.log(exp.val());
+Output :- Dheeraj
 ```
-
-### Get Element by attributes
+#### Get element by Class
+Code:- 
 ```javascript
-var b = rao("input[type='text']");
+rao(".class");
+```
+Example:-
+```javascript
+<input type ="text" class="name" value="Dheeraj">
+<input type ="text" class="name" value="rao">
+var exp = rao(".name");
+console.log(exp[0].val());
+Output :- Dheeraj
+```
+#### Get element by attributes
+Code:- 
+```javascript
+rao("input[type='text']");
+```
+Example:-
+```javascript
+<input type ="text" class="name" value="Rao">
+var exp = rao("input[type='text']");
+console.log(exp[0].val());
+Output :- Rao
 ```
 
 ### Get/Set html 

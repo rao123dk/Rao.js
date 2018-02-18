@@ -104,6 +104,30 @@ Example:-
 console.log(r.countDown(01,01,2018)); // Format will be DD/MM/YYYY
 Output :- {total: 896620000, days: 10, hours: 9, minutes: 3, seconds: 40}
 ```
+#### Difference between two Dates 
+Code:- 
+```javascript
+r.dayDiff("Start_date","end_date"));   // Format will be DD/MM/YYYY
+r.dayDiffSatSun("Start_date","end_date"));
+r.dayDiffHoliday("Start_date","end_date",array_of_list));
+```
+Example:-
+ 1. Get difference between two date {General}
+```javascript
+r.dayDiff("Start_date","end_date")); // Format will be DD/MM/YYYY
+console.log(r.dayDiff("21/12/2017","30/12/2017")); 
+Output :- 9
+```
+ 2. Get difference between two date{ escape Saturday and Sunday i.e. count only working days}
+```javascript
+ r.dayDiffSatSun("Start_date","end_date")); // Format will be DD/MM/YYYY
+ console.log(r.dayDiffSatSun("21/12/2017","30/12/2017")); 
+ Output :- 7
+```
+ 3. Get difference between two date{ escape Saturday, Sunday and *holiday festival* also}
+```javascript
+ 	console.log("Coming soon.....");
+```
 # String
 #### Random string generator(i.e. also password generator)
 Code:- 
@@ -114,6 +138,35 @@ Example:-
 ```javascript
 console.log(r.randomString(8));
 Output :- g485edgn
+```
+#### Convert Strint into uppercase in diiferent condition 
+Code:- 
+```javascript
+r.upper(str,"1");
+r.upper(str,"1++");
+r.upper(str,">1");
+```
+Example:-
+```javascript
+var str = "thanks for using Rao.js";
+(A) console.log(r.upper(str,"1"));
+    Output:- Thanks for using Rao.js
+(B) console.log(r.upper(str,"1++"));
+    Output:- Thanks For Using Rao.js
+(C) console.log(r.upper(str,">1"));
+    Output:- Thanks For Using Rao.js
+```
+#### Replace string 
+Preserve the case of the original word when you are replacing it. For example if you mean to replace the word "Book" with the word "pen", it should be replaced as "Pen".
+Code:- 
+```javascript
+r.rao_replace(str, to, with)
+```
+Example:-
+```javascript
+let org_str = "This is my Book.",
+console.log(r.rao_replace(org_str, "Book", "pen"));
+Output :- This is my Pen.
 ```
 # DOM
 #### Get element by id
@@ -236,44 +289,23 @@ Output :-
   <p>Item 3</p>
 ```
 
-### Events
+#### Events add/remove
+Code:- 
 ```javascript
-rao('#txt').on('click', function(){ 
-    alert("hmm");
+rao('#id').on('click', function(){ 
+//code here....
 });
-
-rao('#txt').off('click');
+rao('#id').off('click');
 ```
-
-### Convert to UPPER case 
-Like "hello javascript" to "HELLO JAVASCRIPT"
+Example:-
 ```javascript
-console.log(rao('#id').UPPER());
-```
-    
-
-### convert to uppercase letter by diffrent style
-1. Like "javaScript often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based programming language." to 
-"JavaScript often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based programming language."
-```javascript
-var str = "javaScript often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based programming language.";
-console.log(r.upper(str,"1"));
+rao('#id').on('click', function(){ 
+ alert("Thanks For using Rao.js");
+});
+rao('#id').off('click');
 ```
 
-2. Like "javaScript often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based programming language." to 
-"JavaScript Often Abbreviated As JS, Is A High-level, Dynamic, Weakly Typed, Prototype-based Programming Language."
-```javascript
-var str = "javaScript often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based programming language.";
-console.log(r.upper(str,"1++"));
-console.log(r.upper(str,">1"));
-```
-3. Preserve the case of the original word when you are replacing it. For example if you mean to replace the word "Book" with the word "pen", it should be replaced as "Pen".
- :hotsprings:
-```javascript
-let org_str = "This is my Book.",
-console.log(r.rao_replace(org_str, "Book", "pen"));
-Output :- This is my Pen.
-```
+
 
 ### Get/set attribute dynamically from/in element
 Set own attribute
@@ -335,28 +367,7 @@ rao("#id").removeClass("alreadyThere");
    console.log(r.random(10, 111));
    Output :- 29 or different 
 ```
-### Difference between two Dates 
- 1. Get difference between two date {General}
- :hotsprings:
-```javascript
- 	// r.dayDiff("Start_date","end_date")); // Format will be DD/MM/YYYY
- 	console.log(r.dayDiff("21/12/2017","30/12/2017")); 
- 	Output :- 9
-```
 
- 2. Get difference between two date{ escape Saturday and Sunday i.e. count only working days}
-  :hotsprings:
-```javascript
- 	// r.dayDiffSatSun("Start_date","end_date")); // Format will be DD/MM/YYYY
- 	console.log(r.dayDiffSatSun("21/12/2017","30/12/2017")); 
- 	Output :- 7
-```
-
- 3. Get difference between two date{ escape Saturday, Sunday and *holiday festival* also}
-  :hotsprings:
-```javascript
- 	console.log("Coming soon.....");
-```
 
 
 #### Thanks!

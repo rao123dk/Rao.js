@@ -213,9 +213,27 @@ Output :-
   <div id="id"> Hello</div>
 </div>
 ```
-### Find all child elements of parent element
+#### Find all child elements of parent element
+Code:- 
 ```javascript
-rao('#parentid').mychild();
+rao('#id').mychild();
+```
+Example:-
+```html
+<div id="todolist">
+  <p>Item 1</p>
+  <p>Item 2</p>
+  <p>Item 3</p>
+  <p>Item 3</p>
+</div>
+```
+```javascript
+rao('#todolist').mychild();
+Output :- 
+  <p>Item 1</p>
+  <p>Item 2</p>
+  <p>Item 3</p>
+  <p>Item 3</p>
 ```
 
 ### Events

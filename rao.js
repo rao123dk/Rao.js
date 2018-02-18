@@ -570,7 +570,9 @@ window.r = {
 		return (!!val) && val && (val.constructor === Array);
 		//return (typeof val !== 'undefined' && val && val.constructor === Array);
 	},
-	isString : function(){},
+	isString : function(){
+		return (!!val && val.constructor === String && (typeof val === 'string' || val instanceof String));
+	},
 	isObject : function(val){
 		if (val === null) { return false;}
     	return ( (typeof val === 'function') || (typeof val === 'object') && (val.constructor === Object) );	

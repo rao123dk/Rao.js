@@ -166,3 +166,11 @@ console.log(r.countDown(01,01,2018));
 console.log(r.countDown(21,12,2017));
 
 console.log(r.deviceType()); //detect device type
+
+//
+// ['Arguments', 'Function', 'String', 'Number', 'Date', 'RegExp'].forEach( 
+//     function(name) { 
+//         window['is' + name] = function(obj) {
+//               return toString.call(obj) == '[object ' + name + ']';
+//     }; 
+// });

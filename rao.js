@@ -565,6 +565,12 @@ window.r = {
 		days = days - 1  ;
 
 		return days;
+	},
+	isArray : function(){},
+	isString : function(){},
+	isObject : function(val){
+		if (val === null) { return false;}
+    	return ( (typeof val === 'function') || (typeof val === 'object') && (val.constructor === Object) );	
 	}
 	
 } //Object window.r end here
@@ -577,14 +583,6 @@ Rao.prototype.mychild = function(){
 
 //document.write("<script>console.log('%c welcome to Rao.js', 'background:#02f902; font-size:50px;');</script>");
 
-
-//find
-
-// $this
-//browser
-
-
-//
 Rao.prototype.next = function(){
 
 }

@@ -566,7 +566,10 @@ window.r = {
 
 		return days;
 	},
-	isArray : function(){},
+	isArray : function(val){
+		return (!!val) && val && (val.constructor === Array);
+		//return (typeof val !== 'undefined' && val && val.constructor === Array);
+	},
 	isString : function(){},
 	isObject : function(val){
 		if (val === null) { return false;}

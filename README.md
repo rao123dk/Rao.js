@@ -104,6 +104,30 @@ Example:-
 console.log(r.countDown(01,01,2018)); // Format will be DD/MM/YYYY
 Output :- {total: 896620000, days: 10, hours: 9, minutes: 3, seconds: 40}
 ```
+#### Difference between two Dates 
+Code:- 
+```javascript
+r.dayDiff("Start_date","end_date"));   // Format will be DD/MM/YYYY
+r.dayDiffSatSun("Start_date","end_date"));
+r.dayDiffHoliday("Start_date","end_date",array_of_list));
+```
+Example:-
+ 1. Get difference between two date {General}
+```javascript
+r.dayDiff("Start_date","end_date")); // Format will be DD/MM/YYYY
+console.log(r.dayDiff("21/12/2017","30/12/2017")); 
+Output :- 9
+```
+ 2. Get difference between two date{ escape Saturday and Sunday i.e. count only working days}
+```javascript
+ r.dayDiffSatSun("Start_date","end_date")); // Format will be DD/MM/YYYY
+ console.log(r.dayDiffSatSun("21/12/2017","30/12/2017")); 
+ Output :- 7
+```
+ 3. Get difference between two date{ escape Saturday, Sunday and *holiday festival* also}
+```javascript
+ 	console.log("Coming soon.....");
+```
 # String
 #### Random string generator(i.e. also password generator)
 Code:- 
@@ -343,28 +367,7 @@ rao("#id").removeClass("alreadyThere");
    console.log(r.random(10, 111));
    Output :- 29 or different 
 ```
-### Difference between two Dates 
- 1. Get difference between two date {General}
- :hotsprings:
-```javascript
- 	// r.dayDiff("Start_date","end_date")); // Format will be DD/MM/YYYY
- 	console.log(r.dayDiff("21/12/2017","30/12/2017")); 
- 	Output :- 9
-```
 
- 2. Get difference between two date{ escape Saturday and Sunday i.e. count only working days}
-  :hotsprings:
-```javascript
- 	// r.dayDiffSatSun("Start_date","end_date")); // Format will be DD/MM/YYYY
- 	console.log(r.dayDiffSatSun("21/12/2017","30/12/2017")); 
- 	Output :- 7
-```
-
- 3. Get difference between two date{ escape Saturday, Sunday and *holiday festival* also}
-  :hotsprings:
-```javascript
- 	console.log("Coming soon.....");
-```
 
 
 #### Thanks!

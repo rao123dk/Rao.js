@@ -78,7 +78,27 @@ var array = ["a", "f", "e", "w", "r", "e", "o", "j", "j","w"];
 console.log(r.removeDuplicate(array));
 Output :- ["a", "f", "e", "w", "r", "o", "j"]
 ```
+#### Check Array or not
+ Code:-
+```javascript
+r.isArray();
+```
+Example:-
+```javascript
+console.log(r.isArray());
+Output :- true/false
+```
 # Object
+#### Check Object or not
+ Code:-
+```javascript
+r.isObject();
+```
+Example:-
+```javascript
+console.log(r.isObject());
+Output :- true/false
+```
 # Time
 #### Digital watch
 Code:- 
@@ -167,6 +187,17 @@ Example:-
 let org_str = "This is my Book.",
 console.log(r.rao_replace(org_str, "Book", "pen"));
 Output :- This is my Pen.
+```
+
+#### Check String or not
+ Code:-
+```javascript
+r.isString();
+```
+Example:-
+```javascript
+console.log(r.isString());
+Output :- true/false
 ```
 # DOM
 #### Get element by id

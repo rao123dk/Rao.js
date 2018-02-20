@@ -4,7 +4,7 @@
 ## CDN
 ```javascript
 CDN for production:- 
-<script src="https://cdn.rawgit.com/rao123dk/Rao.js/5cab7589/rao.js"> </script> 
+<script src="https://cdn.rawgit.com/rao123dk/Rao.js/dca29915/rao.js"> </script> 
 
 
 CDN for development

@@ -81,23 +81,30 @@ Output :- ["a", "f", "e", "w", "r", "o", "j"]
 #### Check Array or not
  Code:-
 ```javascript
-r.isArray();
+r.isArray(value);
 ```
 Example:-
 ```javascript
-console.log(r.isArray());
-Output :- true/false
+var value = [1,2,3];
+console.log(r.isArray(value));
+Output :- true
 ```
 # Object
 #### Check Object or not
  Code:-
 ```javascript
-r.isObject();
+r.isObject(value);
 ```
 Example:-
 ```javascript
-console.log(r.isObject());
-Output :- true/false
+var value = {};
+console.log(r.isObject(value));
+Output :- true
+```
+```javascript
+var value = "hello";
+console.log(r.isObject(value));
+Output :- false
 ```
 # Time
 #### Digital watch
@@ -192,12 +199,13 @@ Output :- This is my Pen.
 #### Check String or not
  Code:-
 ```javascript
-r.isString();
+r.isString(value);
 ```
 Example:-
 ```javascript
-console.log(r.isString());
-Output :- true/false
+var value = "Thanks for using Rao.js";
+console.log(r.isString(value));
+Output :- true
 ```
 # DOM
 #### Get element by id

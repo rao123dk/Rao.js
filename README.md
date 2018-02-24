@@ -3,8 +3,13 @@
 [![HitCount](http://hits.dwyl.io/rao123dk/Rao.js.svg)](http://hits.dwyl.io/rao123dk/Rao.js)
 ## CDN
 ```javascript
+<<<<<<< HEAD
 CDN for production:-
 <script src="https://cdn.rawgit.com/rao123dk/Rao.js/5cab7589/rao.js"> </script>
+=======
+CDN for production:-
+<script src="https://cdn.rawgit.com/rao123dk/Rao.js/dca29915/rao.js"> </script>
+>>>>>>> c26205bfdc0468faa18dc0a74cd1810448751a68
 
 
 CDN for development
@@ -80,8 +85,36 @@ var array = ["a", "f", "e", "w", "r", "e", "o", "j", "j","w"];
 console.log(r.removeDuplicate(array));
 Output :- ["a", "f", "e", "w", "r", "o", "j"]
 ```
+#### Check Array or not
+ Code:-
+```javascript
+r.isArray(value);
+```
+Example:-
+```javascript
+var value = [1,2,3];
+console.log(r.isArray(value));
+Output :- true
+```
 # Object
+#### Check Object or not
+ Code:-
+```javascript
+r.isObject(value);
+```
+Example:-
+```javascript
+var value = {};
+console.log(r.isObject(value));
+Output :- true
+```
+```javascript
+var value = "hello";
+console.log(r.isObject(value));
+Output :- false
+```
 #JSON
+#### Check JSON data is valid or not
 Code:-
 ```javascript
 r.isJSON(value);
@@ -184,6 +217,18 @@ Example:-
 let org_str = "This is my Book.",
 console.log(r.rao_replace(org_str, "Book", "pen"));
 Output :- This is my Pen.
+```
+
+#### Check String or not
+ Code:-
+```javascript
+r.isString(value);
+```
+Example:-
+```javascript
+var value = "Thanks for using Rao.js";
+console.log(r.isString(value));
+Output :- true
 ```
 # DOM
 #### Get element by id

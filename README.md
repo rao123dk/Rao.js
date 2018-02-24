@@ -3,16 +3,10 @@
 [![HitCount](http://hits.dwyl.io/rao123dk/Rao.js.svg)](http://hits.dwyl.io/rao123dk/Rao.js)
 ## CDN
 ```javascript
-<<<<<<< HEAD
-CDN for production:-
-<script src="https://cdn.rawgit.com/rao123dk/Rao.js/5cab7589/rao.js"> </script>
-=======
 CDN for production:-
 <script src="https://cdn.rawgit.com/rao123dk/Rao.js/dca29915/rao.js"> </script>
->>>>>>> c26205bfdc0468faa18dc0a74cd1810448751a68
 
-
-CDN for development
+CDN for development :- 
 <script src="https://rawgit.com/rao123dk/Rao.js/master/rao.js"> </script>
 
 ```

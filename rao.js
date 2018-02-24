@@ -3,9 +3,9 @@
 "use strict";
 
 var Rao = function(selector) {
-	this.selector = selector || null; 
+	this.selector = selector || null;
  	this.element = null;
- 	
+
 };
 
 //main selector
@@ -17,7 +17,7 @@ window.rao = function(selector){
 	}else {
 		return elm["element"];
 	}
-	
+
 }
 
 // for initialization and selection
@@ -25,7 +25,7 @@ Rao.prototype.init = function(){
 	if(this.selector.charAt(0) === '#'){
 		this.element = document.getElementById(this.selector.substr(1));
 	}else if(this.selector.charAt(0) === '.'){
-		this.element = document.querySelectorAll(this.selector);	
+		this.element = document.querySelectorAll(this.selector);
 	}
 }
 
@@ -115,13 +115,13 @@ Rao.prototype.LOWER = function() {
 }
 
 
-//set and get attribute 
+//set and get attribute
 Rao.prototype.attri = function(key, value){
 	if(key !== undefined && value !== undefined){
 		this.element.setAttribute(key,value);
 	}else if(key !== undefined){
 		return this.element.getAttribute(key);
-	}	
+	}
 }
 
 //Hide and show element and toggle(inOut)
@@ -140,9 +140,9 @@ Rao.prototype.inOut = function(){
 
 Rao.prototype.Data = function(custom_data){
 	if(custom_data !== undefined){
-		return document.getElementById(this.element.getAttribute("id")).getAttribute(custom_data);	
+		return document.getElementById(this.element.getAttribute("id")).getAttribute(custom_data);
 	}
-	
+
 }
 
 // copy right year
@@ -154,13 +154,13 @@ Rao.prototype.currentYear = function(){
 Rao.prototype.addClass = function(addclass){
 	if(addclass !== undefined){
 		this.element.className += " "+addclass;
-	}	
+	}
 }
 Rao.prototype.removeClass = function(removeClass){
 	if(removeClass !== undefined){
 		this.element.classList.remove(removeClass);
 	}
-	
+
 }
 // check class availability
 Rao.prototype.hasClass = function(hasClass){
@@ -169,11 +169,11 @@ Rao.prototype.hasClass = function(hasClass){
 	}else{
 		return false;
 	}
-	
+
 }
 
 
-// For rao animation 
+// For rao animation
 
 Rao.prototype.slide = function(slide_type, slide_speed){
 	//@ slide_type - up, down, and toggele
@@ -182,14 +182,14 @@ Rao.prototype.slide = function(slide_type, slide_speed){
 		this.element.style.display = 'none';
 		//this.element.style.opacity += 0.1;
 		this.speed(slide_speed , this.element , "up");
-		
+
 	}
 
 	if(slide_type !== undefined && slide_type === "down"){
 		this.element.style.display = 'block';
 		this.element.style.opacity += 0.9;
 		this.speed(slide_speed,this.element, "down");
-		
+
 	}
 
 	if(slide_type !== undefined && slide_type === "toggel"){
@@ -220,10 +220,10 @@ Rao.prototype.speed = function(_speed , _element , _slide_type){
 	        }
 	        _element.style.opacity = op;
 	        //console.log(slider_oper);
-	    }, _tr_rate);	
+	    }, _tr_rate);
 	}
-	
-	
+
+
     switch(_slide_type){
     	case "up":
     	slider_cond = eval("op_up === 0.1");
@@ -263,17 +263,17 @@ Rao.prototype.r = {
 
 
 
-//A universal object for external functions 
+//A universal object for external functions
 window.r = {
-	// speacial method rao_replace eg:- if you want to replce "Rao" to "dk" 
-	//then it will directly replce by Dk 
+	// speacial method rao_replace eg:- if you want to replce "Rao" to "dk"
+	//then it will directly replce by Dk
 	 rao_replace : function(str, before, after){
 		return str.replace(before, function(before){
 			if (before.charAt(0) === before.charAt(0).toUpperCase()) {
 		    	return after.charAt(0).toUpperCase() + after.substr(1).toLowerCase();
 			} else {
 		    	return after.charAt(0).toLowerCase() + after.substr(1).toLowerCase();
-			}	
+			}
 		});
 	},
 
@@ -299,7 +299,7 @@ window.r = {
 				return " 'Illegal modifier' "
 
 			}
-			
+
 		}
 	},
 
@@ -307,7 +307,7 @@ window.r = {
 	showWatch : function(selector, h, m, s, hour12=false) {
 		r.timercal(selector,h,m,s);
 		setInterval(function(){
-			r.timercal(selector,h,m,s); 
+			r.timercal(selector,h,m,s);
 		}, 1000);
 	},
 	timercal : function(selector,h, m, s){
@@ -321,7 +321,7 @@ window.r = {
 			this.hh = this.hh ? this.hh : 12;
 			this.displayTime=0;
 			if(selector !== undefined && h === "h" && m === "m" && s === "s"){
-				this.displayTime = this.hh + ":" + this.mm + ":" + this.ss; 
+				this.displayTime = this.hh + ":" + this.mm + ":" + this.ss;
 			}else if(selector !== undefined && h === "h" && m=== "m"){
 				this.displayTime = this.hh + ":" + this.mm;
 			}else if(selector !== undefined && h === "h"){
@@ -343,11 +343,11 @@ window.r = {
 		    e.preventDefault();
 		});
 	},
-	
+
 	//for random number
 	random :function(a, b){
-		this.max = Math.max(a, b); 
-		this.min =  Math.min(a, b);  
+		this.max = Math.max(a, b);
+		this.min =  Math.min(a, b);
 		return Math.floor(Math.random() * (this.max - this.min + 1)) + this.min;
 	},
 	// for random string
@@ -374,19 +374,9 @@ window.r = {
 			if (callNow) func.apply(context, args);
 		};
 	},
-
-
-	//for JavaScript to PHP
-	//$str = "A string here";
-	// P2J : function(str){
-	// 	var bool = '<?php echo str ?>';
-	// 	document.write('<script type="text/javascript">'+ bool +'</script>');
-	// },
-
-	//for browser
 	browser:function(){
 
-		var ua= navigator.userAgent, tem, 
+		var ua= navigator.userAgent, tem,
 		M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
 		if(/trident/i.test(M[1])){
 			tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
@@ -399,7 +389,7 @@ window.r = {
 		M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
 		if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
 		return M.join(' ');
-		
+
 	},
 	deviceType : function(){
   		return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop';
@@ -412,7 +402,7 @@ window.r = {
 		});
 	},
 	duplicate:function(duplicateArray){
-		let result = [];
+		var result = [];
 		if(r.ES6()){
 			let arr = duplicateArray;
 			let hash = new Map();
@@ -434,13 +424,13 @@ window.r = {
 			return result;
 		}else{
 			//code if ES6 not
-			const strArr = duplicateArray.join('~').toLowerCase().split('~').sort().join("").match(/(.)\1+/g);
+			var strArr = duplicateArray.join('~').toLowerCase().split('~').sort().join("").match(/(.)\1+/g);
   			if (strArr != null) {
     			strArr.forEach((elem) => { result.push(elem[0]); });
   			}
 			return result;
 		}
-		
+
 	},
 	removeDuplicate : function(removeDuplicateArray){
 		let uniqueArray;
@@ -451,7 +441,7 @@ window.r = {
     			return removeDuplicateArray.indexOf(item) == pos;
 			});
 		}
-		
+
 		return uniqueArray;
 	},
 	//ECMAScript 2015
@@ -459,7 +449,7 @@ window.r = {
 		if (typeof Symbol == "undefined") {
 			return false;
 		}
-		try { 
+		try {
 			 eval("class RAORAO {}");
         	 eval("let ORAORA = (x) => x+1");
 		}
@@ -481,7 +471,7 @@ window.r = {
 	ES8:function (){
 		let obj = { lib: 'Rao.js', version: '1.0.0' };
 		try {
-			let a = Object.values(obj); 
+			let a = Object.values(obj);
 			let b = Object.entries(obj);
 			return true;
 		}
@@ -491,7 +481,7 @@ window.r = {
 	},
 	countDown : function (targetDate, targetMonth, targetYear) {
 		var targetCountDown = targetMonth+ " " + targetDate+ " " + targetYear+ " " + "23:59:59";
-		var targetCountDown = Date.parse(targetCountDown); 
+		var targetCountDown = Date.parse(targetCountDown);
 		var currntTime = Date.parse(new Date());
         var t = targetCountDown - currntTime;
 	    var seconds = Math.floor( (t/1000) % 60 );
@@ -507,7 +497,7 @@ window.r = {
 	    	'minutes': minutes,
 	    	'seconds': seconds
 		};
-		
+
 	},
 	//for time,day and year
 	now : function(what){
@@ -517,13 +507,13 @@ window.r = {
 	 	case "day" :
 	 		return new Date().toDateString().split(" ")[0]; //["Thu", "Dec", "21", "2017"]
 	 		break;
-	 	case "month" : 
+	 	case "month" :
 	 		return new Date().toDateString().split(" ")[1];
 	 		break;
- 		case "date" : 
+ 		case "date" :
 	 		return new Date().toDateString().split(" ")[2];
 	 		break;
- 		case "year" : 
+ 		case "year" :
 	 		return new Date().toDateString().split(" ")[2];
 	 		break;
 	 }
@@ -543,9 +533,9 @@ window.r = {
 		this.start_date = new Date(r.dateFormater(start_date));
 		this.end_date = new Date(r.dateFormater(end_date));
 		var millisecondsPerDay = 86400 * 1000;
-		this.start_date.setHours(0,0,0,1);  
-		this.end_date.setHours(23,59,59,999);  
-		var diff = this.end_date - this.start_date;     
+		this.start_date.setHours(0,0,0,1);
+		this.end_date.setHours(23,59,59,999);
+		var diff = this.end_date - this.start_date;
 		var days = Math.ceil(diff / millisecondsPerDay);
 
 		// Subtract two weekend days for every week in between
@@ -554,9 +544,9 @@ window.r = {
 		// Handle special cases
 		var startDay = this.start_date.getDay();
 		var endDay = this.end_date.getDay();
-		// Remove weekend not previously removed.   
-		if (startDay - endDay > 1)         
-		days = days - 2;      
+		// Remove weekend not previously removed.
+		if (startDay - endDay > 1)
+		days = days - 2;
 		// Remove start day if span starts on Sunday but ends before Saturday
 		if (startDay === 0 && endDay != 6)
 		days = days - 1 ;
@@ -570,14 +560,24 @@ window.r = {
 		return (!!val) && val && (val.constructor === Array);
 		//return (typeof val !== 'undefined' && val && val.constructor === Array);
 	},
-	isString : function(){
+	isString : function(val){
 		return (!!val && val.constructor === String && (typeof val === 'string' || val instanceof String));
 	},
 	isObject : function(val){
 		if (val === null) { return false;}
-    	return ( (typeof val === 'function') || (typeof val === 'object') && (val.constructor === Object) );	
+    	return ( (typeof val === 'function') || (typeof val === 'object') && (val.constructor === Object) );
+	},
+	isJSON : function(val){
+		//@@ it is also used for check valid json
+		try {
+			JSON.parse(val) && !!val;
+			return true;
+		} catch (e) {
+			return false;
+		}
+
 	}
-	
+
 } //Object window.r end here
 
 
@@ -592,7 +592,5 @@ Rao.prototype.next = function(){
 
 }
 
-
-//var $$ = document.querySelectorAll.bind(document);
 
 })(window);

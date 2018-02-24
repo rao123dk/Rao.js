@@ -3,22 +3,24 @@
 [![HitCount](http://hits.dwyl.io/rao123dk/Rao.js.svg)](http://hits.dwyl.io/rao123dk/Rao.js)
 ## CDN
 ```javascript
-CDN for production:- 
-<script src="https://cdn.rawgit.com/rao123dk/Rao.js/5cab7589/rao.js"> </script> 
+CDN for production:-
+<script src="https://cdn.rawgit.com/rao123dk/Rao.js/5cab7589/rao.js"> </script>
 
 
 CDN for development
-<script src="https://rawgit.com/rao123dk/Rao.js/master/rao.js"> </script> 
+<script src="https://rawgit.com/rao123dk/Rao.js/master/rao.js"> </script>
 
 ```
 # Table of Contents
  * [Browser](#browser)
  * [Array](#array)
  * [Object](#object)
+ * [JSON](#json)
+ * [Web Storage](#WebStorage)
  * [Time](#time)
  * [String](#string)
  * [DOM](#dom)
- 
+
 
 # Browser
 #### Detect Client Browser name and version
@@ -42,7 +44,7 @@ console.log(r.deviceType());
 Output :- Desktop/Mobile
 ```
 #### JavaScript new feature browser compatibility checker(i.e. ECMAScript 2015/2016/2017)
-Code:- 
+Code:-
 ```javascript
 r.ES6()
 r.ES7()
@@ -68,7 +70,7 @@ console.log(r.duplicate(array));
 Output :- ["e", "w", "j"]
 ```
 #### Remove duplicate items from array
-Code:- 
+Code:-
 ```javascript
 r.duplicate(arrayName);
 ```
@@ -79,9 +81,24 @@ console.log(r.removeDuplicate(array));
 Output :- ["a", "f", "e", "w", "r", "o", "j"]
 ```
 # Object
+#JSON
+Code:-
+```javascript
+r.isJSON(value);
+```
+Example:-
+```javascript
+console.log(r.isJSON('{"name" : "dheerraj", "Age" : 22}'););
+Output:- true
+```
+```javascript
+console.log(r.isJSON('{"name" : "dheerraj", Age : 22}'););
+Output:- false
+```
+#Web Storage
 # Time
 #### Digital watch
-Code:- 
+Code:-
 ```javascript
 r.showWatch('#showwatchid',"h","m","s",hour12=true/false);
 ```
@@ -90,12 +107,12 @@ Example:-
 console.log(r.showWatch('#showwatchid',"h","m","s",hour12=true));
 Output:- 1:8:58 PM
 console.log(r.showWatch('#showwatchid',"h","m","s",hour12=false));
-Output:- 13:8:58 
+Output:- 13:8:58
 console.log(r.showWatch('#showwatchid',"h","m",hour12=true));
 Output:- 1:08 PM
 ```
 #### Countdown Timer
-Code:- 
+Code:-
 ```javascript
 r.countDown(01,01,2018)
 ```
@@ -104,8 +121,8 @@ Example:-
 console.log(r.countDown(01,01,2018)); // Format will be DD/MM/YYYY
 Output :- {total: 896620000, days: 10, hours: 9, minutes: 3, seconds: 40}
 ```
-#### Difference between two Dates 
-Code:- 
+#### Difference between two Dates
+Code:-
 ```javascript
 r.dayDiff("Start_date","end_date"));   // Format will be DD/MM/YYYY
 r.dayDiffSatSun("Start_date","end_date"));
@@ -115,13 +132,13 @@ Example:-
  1. Get difference between two date {General}
 ```javascript
 r.dayDiff("Start_date","end_date")); // Format will be DD/MM/YYYY
-console.log(r.dayDiff("21/12/2017","30/12/2017")); 
+console.log(r.dayDiff("21/12/2017","30/12/2017"));
 Output :- 9
 ```
  2. Get difference between two date{ escape Saturday and Sunday i.e. count only working days}
 ```javascript
  r.dayDiffSatSun("Start_date","end_date")); // Format will be DD/MM/YYYY
- console.log(r.dayDiffSatSun("21/12/2017","30/12/2017")); 
+ console.log(r.dayDiffSatSun("21/12/2017","30/12/2017"));
  Output :- 7
 ```
  3. Get difference between two date{ escape Saturday, Sunday and *holiday festival* also}
@@ -130,7 +147,7 @@ Output :- 9
 ```
 # String
 #### Random string generator(i.e. also password generator)
-Code:- 
+Code:-
 ```javascript
 r.randomString(length_of_string)
 ```
@@ -139,8 +156,8 @@ Example:-
 console.log(r.randomString(8));
 Output :- g485edgn
 ```
-#### Convert Strint into uppercase in diiferent condition 
-Code:- 
+#### Convert Strint into uppercase in diiferent condition
+Code:-
 ```javascript
 r.upper(str,"1");
 r.upper(str,"1++");
@@ -156,9 +173,9 @@ var str = "thanks for using Rao.js";
 (C) console.log(r.upper(str,">1"));
     Output:- Thanks For Using Rao.js
 ```
-#### Replace string 
+#### Replace string
 Preserve the case of the original word when you are replacing it. For example if you mean to replace the word "Book" with the word "pen", it should be replaced as "Pen".
-Code:- 
+Code:-
 ```javascript
 r.rao_replace(str, to, with)
 ```
@@ -170,7 +187,7 @@ Output :- This is my Pen.
 ```
 # DOM
 #### Get element by id
-Code:- 
+Code:-
 ```javascript
 rao("#id");
 ```
@@ -182,7 +199,7 @@ console.log(exp.val());
 Output :- Dheeraj
 ```
 #### Get element by Class
-Code:- 
+Code:-
 ```javascript
 rao(".class");
 ```
@@ -195,7 +212,7 @@ console.log(exp[0].val());
 Output :- Dheeraj
 ```
 #### Get element by attributes
-Code:- 
+Code:-
 ```javascript
 rao("input[type='text']");
 ```
@@ -207,8 +224,8 @@ console.log(exp[0].val());
 Output :- Rao
 ```
 
-#### Get/Set html 
-Code:- 
+#### Get/Set html
+Code:-
 ```javascript
 var ht = rao('#htm');
 ht.html();
@@ -224,8 +241,8 @@ ht.html(); //Get
 Output :- <p>Thanks for using Rao.js</p>
 ```
 
-#### Get/Set text 
-Code:- 
+#### Get/Set text
+Code:-
 ```javascript
 var tx = rao('#txt');
 tx.text();
@@ -241,7 +258,7 @@ tx.text(); //Get
 Output :- Thanks for using Rao.js
 ```
 #### Append/Prepend elements
-Code:- 
+Code:-
 ```javascript
 rao('#id').append("<div>Hello append</div>");
 rao('#id').prepend("<div>Hello prepend</div>");
@@ -254,20 +271,20 @@ Example:-
 ```
 ```javascript
 rao('#id').append("<div>Hello append</div>");
-Output :- 
+Output :-
 <div class="parent">
   <div id="id"> Hello</div>
   <div>Hello append</div>
 </div>
 rao('#id').prepend("<div>Hello prepend</div>");
-Output :- 
+Output :-
 <div class="parent">
   <div>Hello prepend</div>
   <div id="id"> Hello</div>
 </div>
 ```
 #### Find all child elements of parent element
-Code:- 
+Code:-
 ```javascript
 rao('#id').mychild();
 ```
@@ -282,7 +299,7 @@ Example:-
 ```
 ```javascript
 rao('#todolist').mychild();
-Output :- 
+Output :-
   <p>Item 1</p>
   <p>Item 2</p>
   <p>Item 3</p>
@@ -290,16 +307,16 @@ Output :-
 ```
 
 #### Events add/remove
-Code:- 
+Code:-
 ```javascript
-rao('#id').on('click', function(){ 
+rao('#id').on('click', function(){
 //code here....
 });
 rao('#id').off('click');
 ```
 Example:-
 ```javascript
-rao('#id').on('click', function(){ 
+rao('#id').on('click', function(){
  alert("Thanks For using Rao.js");
 });
 rao('#id').off('click');
@@ -312,29 +329,29 @@ Set own attribute
 
 ```javascript
 rao('#sr').attri("attribue","value");
-Ex:- 
+Ex:-
 rao('#sr').attri("custom_id","12CU100");
-output :- 
+output :-
 <span id="sr" custom_id ="12CU100"> </span>
 ```
 Get attribue
 ```javascript
 rao('#sr').attri("nameofattribue")
-Ex:- 
+Ex:-
 console.log(rao('#sr').attri("class"));
-Output:- 
+Output:-
 It will return classname of element which is is 'sr'
 ```
 ### Hide, show and toggle(hide/show) element
-Hide 
+Hide
 ```javascript
 rao('#id').out();
 ```
-show 
+show
 ```javascript
 rao('#id').in();
 ```
-toggle 
+toggle
 ```javascript
 rao('#id').inOut();
 ```
@@ -342,15 +359,15 @@ rao('#id').inOut();
 ### Get custom attribute(data-myperonalId) value
 ```javascript
 console.log(rao("#id").Data("customAttribute"));
-ex:- 
+ex:-
 <span id="myid" data-myperonalId="177466"></span>
 console.log(rao("#myid").Data("myperonalId"));
 ```
 
 
 
-### Print current year 
-This method is helpful for those who manually update copyright year on webiste  
+### Print current year
+This method is helpful for those who manually update copyright year on webiste
 ```javascript
 rao("#copyrightYear").currentYear();
 ```
@@ -365,7 +382,7 @@ rao("#id").removeClass("alreadyThere");
 ```javascript
     // r.random(first_digit, last_digit)
    console.log(r.random(10, 111));
-   Output :- 29 or different 
+   Output :- 29 or different
 ```
 
 

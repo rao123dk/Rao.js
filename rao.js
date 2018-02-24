@@ -392,7 +392,7 @@ window.r = {
 
 	},
 	deviceType : function(){
-  		return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop';
+		return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ?( /iPad|iPod/i.test(navigator.userAgent) ? 'iPod/iPad' : 'Mobile' ): 'Desktop';;
 	},
 	// @ impleneting Fetch (!think later)
 	fetch:function(curr_url){

@@ -6,7 +6,7 @@
 CDN for production:-
 <script src="https://cdn.rawgit.com/rao123dk/Rao.js/dca29915/rao.js"> </script>
 
-CDN for development :- 
+CDN for development :-
 <script src="https://rawgit.com/rao123dk/Rao.js/master/rao.js"> </script>
 
 ```
@@ -40,7 +40,10 @@ r.deviceType();
 Example:-
 ```javascript
 console.log(r.deviceType());
-Output :- Desktop/Mobile
+Output :- Desktop
+```
+```javascript
+Outputs :- Desktop/Mobile/iPad/iPod
 ```
 #### JavaScript new feature browser compatibility checker(i.e. ECMAScript 2015/2016/2017)
 Code:-

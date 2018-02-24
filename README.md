@@ -15,7 +15,7 @@ CDN for development :-
  * [Array](#array)
  * [Object](#object)
  * [JSON](#json)
- * [Web Storage](#WebStorage)
+ * [Web Storage](#webstorage)
  * [Time](#time)
  * [String](#string)
  * [DOM](#dom)
@@ -107,7 +107,7 @@ var value = "hello";
 console.log(r.isObject(value));
 Output :- false
 ```
-#JSON
+# JSON
 #### Check JSON data is valid or not
 Code:-
 ```javascript
@@ -122,7 +122,8 @@ Output:- true
 console.log(r.isJSON('{"name" : "dheerraj", Age : 22}'););
 Output:- false
 ```
-#Web Storage
+# Webstorage
+
 # Time
 #### Digital watch
 Code:-

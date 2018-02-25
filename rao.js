@@ -450,6 +450,21 @@ window.r = {
  		 return val.filter(Boolean);
 	    }
 	},
+	removeFromArray : function(tArray, val){
+		var val_index =  tArray.indexOf(val);
+		if ( val_index !== -1) {
+			tArray.splice(val_index, 1);
+		}
+		return tArray;
+	},
+	removeFromArrayAll: function (tArray, val) {
+		for (var z = tArray.length - 1; z >= 0; z--) {
+			if (tArray[z] === val) {
+				tArray.splice(z, 1);
+			}
+		}
+		return tArray;
+	},
 	//ECMAScript 2015
 	ES6 : function(){
 		if (typeof Symbol == "undefined") {

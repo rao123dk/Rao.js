@@ -104,6 +104,31 @@ var value = [1, false, "", undefined, 2, null, NaN,5];
 console.log(r.cleanArray(value));
 Output :- [1,2,5]
 ```
+#### Remove particular item from Array
+Code:-
+```javascript
+r.removeFromArray(array, item); // Remove first found item from array
+r.removeFromArrayAll(array, item); // Remove all target item in array
+```
+Example:-
+```javascript
+var numarray = [3,55,66,55,234,61,99,100,55,055];
+var strarray = ['dheeraj',"rao", "kumar", "rao","Rao"];
+console.log(r.removeFromArray(numarray,3));
+Output :- [55,66,55,234,61,99,100,55,055];
+
+console.log(r.removeFromArray(strarray,"rao"));
+Output :- ['dheeraj',"kumar", "rao","Rao"];
+```
+```javascript
+var numarray = [3,55,66,55,234,61,99,100,55,055];
+var strarray = ['dheeraj',"rao", "kumar", "rao","Rao"];
+console.log(r.removeFromArrayAll(numarray,55));
+Output :- [3, 66, 234, 61, 99, 100, 45]
+
+console.log(r.removeFromArrayAll(strarray,"rao"));
+Output :- ["dheeraj", "kumar", "Rao"]
+```
 
 # Object
 #### Check Object or not

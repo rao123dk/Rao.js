@@ -181,3 +181,10 @@ console.log(r.isJSON(abc));
 
 var arraydata = [1, false, "", undefined, 2, null, NaN,66];
 console.log(r.cleanArray(arraydata));
+
+var numarray = [3,55,66,55,234,61,99,100,55,055];
+var strarray = ['dheeraj',"rao", "kumar", "rao","Rao"];
+
+//console.log(r.removeFromArray(numarray,3));
+console.log(r.removeFromArrayAll(numarray,55));
+console.log(r.removeFromArrayAll(strarray,"rao"));

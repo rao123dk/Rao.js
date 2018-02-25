@@ -83,7 +83,7 @@ console.log(r.removeDuplicate(array));
 Output :- ["a", "f", "e", "w", "r", "o", "j"]
 ```
 #### Check Array or not
- Code:-
+Code:-
 ```javascript
 r.isArray(value);
 ```
@@ -93,6 +93,18 @@ var value = [1,2,3];
 console.log(r.isArray(value));
 Output :- true
 ```
+#### Clean Array i.e. remove undefined,null,'',true,false and NaN from array
+Code:-
+```javascript
+r.cleanArray(value);
+```
+Example:-
+```javascript
+var value = [1, false, "", undefined, 2, null, NaN,5];
+console.log(r.cleanArray(value));
+Output :- [1,2,5]
+```
+
 # Object
 #### Check Object or not
  Code:-

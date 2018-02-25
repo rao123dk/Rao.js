@@ -401,6 +401,7 @@ window.r = {
 			response.json().then(function(data){ console.log(data); return { data } = data; });
 		});
 	},
+	//@@ Array duplicate element
 	duplicate:function(duplicateArray){
 		var result = [];
 		if(r.ES6()){
@@ -433,7 +434,7 @@ window.r = {
 
 	},
 	removeDuplicate : function(removeDuplicateArray){
-		let uniqueArray;
+		var uniqueArray;
 		if(r.ES6()){
 			return uniqueArray = Array.from(new Set(removeDuplicateArray));
 		}else{
@@ -444,8 +445,13 @@ window.r = {
 
 		return uniqueArray;
 	},
+	cleanArray : function(val){
+		if(!!val) {
+ 		 return val.filter(Boolean);
+	    }
+	},
 	//ECMAScript 2015
-	ES6:function(){
+	ES6 : function(){
 		if (typeof Symbol == "undefined") {
 			return false;
 		}

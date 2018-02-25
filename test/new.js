@@ -178,3 +178,6 @@ console.log(r.deviceType()); //detect device type
 
 var abc = '{ "Id": 1, "Name": "Coke" }';
 console.log(r.isJSON(abc));
+
+var arraydata = [1, false, "", undefined, 2, null, NaN,66];
+console.log(r.cleanArray(arraydata));

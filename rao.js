@@ -465,6 +465,12 @@ window.r = {
 		}
 		return tArray;
 	},
+	insertIntoArray : function(inst_arr, indexAt,item){
+		return inst_arr.splice(4, 0, item );
+	},
+	deepCopyArray : function(copyArray){
+		return copyArray.slice(0);
+	},
 	//ECMAScript 2015
 	ES6 : function(){
 		if (typeof Symbol == "undefined") {

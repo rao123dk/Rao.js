@@ -188,3 +188,14 @@ var strarray = ['dheeraj',"rao", "kumar", "rao","Rao"];
 //console.log(r.removeFromArray(numarray,3));
 console.log(r.removeFromArrayAll(numarray,55));
 console.log(r.removeFromArrayAll(strarray,"rao"));
+
+var __strarray = ['dheeraj',"rao", "kumar", "rao","Rao"];
+console.log(__strarray);
+var dbc = r.insertIntoArray(__strarray, 4, "fffffffffffffxxxxx");
+console.log(__strarray); // not fixed @@bug
+
+var ___strarray = ['dheeraj',"rao", "kumar", "rao","Rao"];
+var abcccc = r.deepCopyArray(___strarray);
+___strarray.push(66666666666666);
+console.log(abcccc);
+//storage

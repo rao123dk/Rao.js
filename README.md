@@ -130,6 +130,32 @@ console.log(r.removeFromArrayAll(strarray,"rao"));
 Output :- ["dheeraj", "kumar", "Rao"]
 ```
 
+#### Insert Item at particular position in Array
+Code:-
+```javascript
+r.insertIntoArray(Array_name, indexAt, Item);
+```
+Example:-
+```javascript
+var numarray = [3,55,66,55,234,61,99,100,55,055];
+r.insertIntoArray(numarray, 4, "Rao.js");
+console.log(numarray);
+Output :- [3,55,66,55,"Rao.js",234,61,99,100,55,055];
+```
+#### Make Deep copy of array
+Code:-
+```javascript
+r.deepCopyArray(arrayName);
+```
+Example:-
+```javascript
+var numarray = [3,55,66,55,234,61,99,100,55,055];
+var newArray = r.deepCopyArray(numarray);
+numarray.push("Hello");
+console.log(newArray);
+Output :- [3,55,66,55,234,61,99,100,55,055];
+```
+
 # Object
 #### Check Object or not
  Code:-

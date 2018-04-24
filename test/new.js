@@ -199,3 +199,7 @@ var abcccc = r.deepCopyArray(___strarray);
 ___strarray.push(66666666666666);
 console.log(abcccc);
 //storage
+
+rao('#showmenow').on('click', function(){
+    r.hardReload();
+})

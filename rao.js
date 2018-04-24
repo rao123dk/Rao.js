@@ -394,6 +394,12 @@ window.r = {
 	deviceType : function(){
 		return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ?( /iPad|iPod/i.test(navigator.userAgent) ? 'iPod/iPad' : 'Mobile' ): 'Desktop';;
 	},
+	reload : function(){
+		window.location.reload();
+	},
+	hardReload : function(){
+		window.location.reload(true);
+	},
 	// @ impleneting Fetch (!think later)
 	fetch:function(curr_url){
 		fetch(curr_url)

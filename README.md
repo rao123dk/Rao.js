@@ -59,6 +59,26 @@ console.log(r.ES7());
 console.log(r.ES8());
 Output :- true/false
 ```
+#### Reload the current page(Normal)
+ Code:-
+```javascript
+r.reload();
+```
+Example:-
+```javascript
+r.reload();
+Output :- Reloads the current page from the cache.
+```
+#### Reload the current page(Hard)
+ Code:-
+```javascript
+r.hardReload();
+```
+Example:-
+```javascript
+r.hardReload();
+Output :- Reloads the current page from the server.
+```
 # Array
 #### Check duplicate items
 Code:-

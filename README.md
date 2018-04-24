@@ -64,7 +64,7 @@ Output :- true/false
 ```javascript
 r.reload();
 ```
-Example:-
+Example:- :hearts: page from the cache :hearts:
 ```javascript
 r.reload();
 Output :- Reloads the current page from the cache.
@@ -74,7 +74,7 @@ Output :- Reloads the current page from the cache.
 ```javascript
 r.hardReload();
 ```
-Example:-
+Example:- :hearts: page from the server :hearts:
 ```javascript
 r.hardReload();
 Output :- Reloads the current page from the server.

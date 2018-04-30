@@ -1,5 +1,11 @@
-@@ Deep copy array
-@@ insert at post
+@@ Deep copy array -ok
+@@ insert at post -ok
 @@ VISIBILITY API
-@@ reload
-@@ hardReload
+@@ reload -ok
+@@ hardReload -ok
+@@ getComputedStyle()
+@@ rStore -> store all the data from ajax in encrypted form
+
+
+
+## Ref :- https://gist.github.com/rxaviers/7360908 (Emoji)

@@ -193,6 +193,19 @@ var value = "hello";
 console.log(r.isObject(value));
 Output :- false
 ```
+#### Merge Objects
+ Code:-
+```javascript
+r.mergeObject(object1, object2);
+```
+Example:-
+```javascript
+var object1 = {  "a" : 10, "c" : 22, d : { "k" : "hello"} };
+var object2 = {  "q" : 10 };
+console.log(r.mergeObject(object1, object2););
+Output :- {a: 10, c: 22, d: {k: "hello"}, q: 10}
+```
+
 # JSON
 #### Check JSON data is valid or not
 Code:-

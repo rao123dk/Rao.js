@@ -186,20 +186,24 @@ var numarray = [3,55,66,55,234,61,99,100,55,055];
 var strarray = ['dheeraj',"rao", "kumar", "rao","Rao"];
 
 //console.log(r.removeFromArray(numarray,3));
-console.log(r.removeFromArrayAll(numarray,55));
-console.log(r.removeFromArrayAll(strarray,"rao"));
+// console.log(r.removeFromArrayAll(numarray,55));
+// console.log(r.removeFromArrayAll(strarray,"rao"));
 
-var __strarray = ['dheeraj',"rao", "kumar", "rao","Rao"];
-console.log(__strarray);
-var dbc = r.insertIntoArray(__strarray, 4, "fffffffffffffxxxxx");
-console.log(__strarray); // not fixed @@bug
+// var __strarray = ['dheeraj',"rao", "kumar", "rao","Rao"];
+// console.log(__strarray);
+// var dbc = r.insertIntoArray(__strarray, 4, "fffffffffffffxxxxx");
+// console.log(__strarray); // not fixed @@bug
 
-var ___strarray = ['dheeraj',"rao", "kumar", "rao","Rao"];
-var abcccc = r.deepCopyArray(___strarray);
-___strarray.push(66666666666666);
-console.log(abcccc);
+// var ___strarray = ['dheeraj',"rao", "kumar", "rao","Rao"];
+// var abcccc = r.deepCopyArray(___strarray);
+// ___strarray.push(66666666666666);
+// console.log(abcccc);
 //storage
 
 rao('#showmenow').on('click', function(){
     r.hardReload();
 })
+
+var o1 = {  "a" : 10 };
+var o2 = {  "q" : 23, "r" : 22 };
+console.log(r.mergeObject(o1, o2));

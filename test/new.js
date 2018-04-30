@@ -207,3 +207,13 @@ rao('#showmenow').on('click', function(){
 var o1 = {  "a" : 10 };
 var o2 = {  "q" : 23, "r" : 22 };
 console.log(r.mergeObject(o1, o2));
+
+//type, key, value
+//r.webInsert("local", "raojstest", o1);
+
+//r.webInsert("sessioN", "raojstest", o2);
+
+console.log(r.webFetch("local", "raojstest"));
+console.log(r.webFetch("session", "raojstest"));
+
+r.webRemove("local", "raojstest");

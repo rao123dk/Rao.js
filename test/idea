@@ -4,6 +4,7 @@
 @@ reload -ok
 @@ hardReload -ok
 @@ getComputedStyle()
+@@ merger Objects - ok
 @@ rStore -> store all the data from ajax in encrypted form
 
 

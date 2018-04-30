@@ -630,6 +630,50 @@ window.r = {
 		  }
 
 		  return obj1;
+	},
+
+	// Web Storage (local and session)
+	isStorage : function(){
+		if (typeof (Storage) !== "undefined") {
+			return true;
+		} else {
+			console.log("Your broweser is outdated");
+			return false;
+		}
+	},
+	webInsert : function(type, key, value){
+		if(r.isStorage()){
+			if(type.toLowerCase() === 'local'){
+				var localStorageDB = localStorage.getItem(key) ? JSON.parse(localStorage.getItem(key)) : [];
+				localStorageDB.push(value);
+				localStorage.setItem(key, JSON.stringify(localStorageDB));
+			}else if(type.toLowerCase() === 'session'){
+				var sessionStorageDB = sessionStorage.getItem(key) ? JSON.parse(sessionStorage.getItem(key)) : [];
+				sessionStorageDB.push(value);
+				sessionStorage.setItem(key, JSON.stringify(sessionStorageDB));
+			}
+
+		}
+	},
+	webFetch : function(type, key){
+		if(r.isStorage()){
+			if(type.toLowerCase() === 'local'){
+				return JSON.parse(localStorage.getItem(key));
+			}else if(type.toLowerCase() === 'session'){
+				return JSON.parse(sessionStorage.getItem(key));
+			}
+
+		}
+	},
+	webRemove : function(type, key){
+		if(r.isStorage()){
+			if(type.toLowerCase() === 'local'){
+				localStorage.removeItem(key);
+			}else if(type.toLowerCase() === 'session'){
+				sessionStorage.removeItem(key);
+			}
+		}
+
 	}
 
 

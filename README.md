@@ -4,10 +4,10 @@
 ## CDN
 ```javascript
 CDN for production:-
-<script src="https://cdn.rawgit.com/rao123dk/Rao.js/dca29915/rao.js"> </script>
+<script src="https://rawcdn.githack.com/rao123dk/Rao.js/49a0ee053b07522d1ca875c7748e003ac724bc8f/rao.js"> </script>
 
 CDN for development :-
-<script src="https://rawgit.com/rao123dk/Rao.js/master/rao.js"> </script>
+<script src="https://raw.githack.com/rao123dk/Rao.js/master/rao.js"> </script>
 
 ```
 # Table of Contents
